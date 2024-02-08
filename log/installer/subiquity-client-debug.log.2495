@@ -1,0 +1,47 @@
+2024-02-08 22:48:56,099 INFO subiquity:117 Starting Subiquity TUI revision 5004 of snap /snap/subiquity/5004
+2024-02-08 22:48:56,099 INFO subiquity:118 Arguments passed: ['/snap/subiquity/5004/usr/bin/subiquity']
+2024-02-08 22:48:56,099 DEBUG subiquity:119 Environment: environ({'PYTHONIOENCODING': 'utf-8', 'SNAP_COMMON': '/var/snap/subiquity/common', 'SNAP_INSTANCE_KEY': '', 'LD_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void:/snap/subiquity/5004/lib:/snap/subiquity/5004/usr/lib:/snap/subiquity/5004/lib/x86_64-linux-gnu:/snap/subiquity/5004/usr/lib/x86_64-linux-gnu', 'PYTHONPATH_ORIG': '', 'SNAP_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void', 'PYTHON': '/snap/subiquity/5004/usr/bin/python3.10', 'SNAP_USER_DATA': '/root/snap/subiquity/5004', 'SUBIQUITY_ROOT': '/snap/subiquity/5004', 'PYTHONIOENCODING_ORIG': '', 'SYSTEMD_EXEC_PID': '2495', 'SNAP_REVISION': '5004', 'JOURNAL_STREAM': '8:20113', 'SNAP_CONTEXT': 'l-aUUocaIX9TD4RNSaEgQcWhncttcxEsoaQk3hDbj_ufGxwWDtLQ', 'PYTHON_ORIG': '', 'SNAP_VERSION': '23.08.1', 'TERM': 'linux', 'SNAP_INSTANCE_NAME': 'subiquity', 'SUBIQUITY_ROOT_ORIG': '', 'PATH': '/snap/subiquity/5004/bin:/snap/subiquity/5004/usr/bin:/snap/subiquity/5004/usr/sbin:/snap/subiquity/5004/usr/bin:/snap/subiquity/5004/sbin:/snap/subiquity/5004/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'INVOCATION_ID': 'a4b2c7d8067b477e8442b7555fb8a521', 'SNAP_DATA': '/var/snap/subiquity/5004', 'LANG': 'C.UTF-8', 'SNAP_ARCH': 'amd64', 'SNAP_COOKIE': 'l-aUUocaIX9TD4RNSaEgQcWhncttcxEsoaQk3hDbj_ufGxwWDtLQ', 'SNAP_USER_COMMON': '/root/snap/subiquity/common', 'SNAP_REEXEC': '0', 'SNAP_NAME': 'subiquity', 'PATH_ORIG': '/snap/subiquity/5004/usr/sbin:/snap/subiquity/5004/usr/bin:/snap/subiquity/5004/sbin:/snap/subiquity/5004/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'PWD': '/var/snap/subiquity/5004', 'SNAP_REAL_HOME': '/root', 'SNAP': '/snap/subiquity/5004', 'PYTHONPATH': '/snap/subiquity/5004/lib/python3.10/site-packages', 'APPORT_DATA_DIR': '/snap/subiquity/5004/share/apport'})
+2024-02-08 22:48:56,100 DEBUG asyncio:54 Using selector: EpollSelector
+2024-02-08 22:48:56,100 DEBUG subiquitycore.screen:135 KDGKBTYPE returned b'\x02', is_linux_tty True
+2024-02-08 22:49:07,480 DEBUG subiquitycore.core:123 starting controllers
+2024-02-08 22:49:07,480 DEBUG subiquitycore.core:126 controllers started
+2024-02-08 22:49:07,481 DEBUG subiquity/Progress/_wait_status:110 start: 
+2024-02-08 22:49:07,485 INFO subiquity/Serial:110 start: starting UI
+2024-02-08 22:49:07,485 INFO subiquity/Serial:115 finish: (skipped) SUCCESS
+2024-02-08 22:49:07,485 DEBUG subiquitycore.tui:236 skipping screen Serial
+2024-02-08 22:49:07,485 INFO subiquity/Welcome:110 start: starting UI
+2024-02-08 22:49:07,486 DEBUG subiquity.ui.views.welcome:81 ('ast_ES.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('id_ID.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('ca_ES.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('de_DE.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('en_US.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('en_GB.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('es_ES.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('fr_FR.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('gl_ES.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('hr_HR.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('lv_LV.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,487 DEBUG subiquity.ui.views.welcome:81 ('lt_LT.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('hu_HU.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('nl_NL.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('nb', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('oc_FR.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('pl_PL.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('pt_PT.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('fi_FI.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('sv_SE.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('cs_CZ.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('el_GR.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('be_BY.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('ru_RU.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:07,488 DEBUG subiquity.ui.views.welcome:81 ('sr_RS', 'en_US.UTF-8')
+2024-02-08 22:49:07,489 DEBUG subiquity.ui.views.welcome:81 ('uk_UA.UTF-8', 'en_US.UTF-8')
+2024-02-08 22:49:23,145 DEBUG subiquity.ui.views.welcome:102 WelcomeView ('en_US.UTF-8', 'English')
+2024-02-08 22:49:23,145 DEBUG subiquity.client.controllers.welcome:49 WelcomeController.done en_US.UTF-8 next_screen
+2024-02-08 22:49:23,147 INFO subiquity/Welcome:115 finish: completed SUCCESS
+2024-02-08 22:49:23,147 INFO subiquity/Refresh:110 start: starting UI
+2024-02-08 22:49:23,352 DEBUG subiquity.client.controllers.refresh:86 RefreshController.done next_screen
+2024-02-08 22:49:23,353 INFO subiquity/Refresh:115 finish: completed SUCCESS
+2024-02-08 22:49:23,353 INFO subiquity/Keyboard:110 start: starting UI
+2024-02-08 22:49:25,368 INFO subiquity/Keyboard:115 finish: completed SUCCESS
+2024-02-08 22:49:25,369 INFO subiquity/Refresh:110 start: starting UI

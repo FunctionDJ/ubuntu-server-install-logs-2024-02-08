@@ -1,0 +1,11 @@
+2024-02-08 22:48:56,099 INFO subiquity:117 Starting Subiquity TUI revision 5004 of snap /snap/subiquity/5004
+2024-02-08 22:48:56,099 INFO subiquity:118 Arguments passed: ['/snap/subiquity/5004/usr/bin/subiquity']
+2024-02-08 22:49:07,485 INFO subiquity/Serial:110 start: starting UI
+2024-02-08 22:49:07,485 INFO subiquity/Serial:115 finish: (skipped) SUCCESS
+2024-02-08 22:49:07,485 INFO subiquity/Welcome:110 start: starting UI
+2024-02-08 22:49:23,147 INFO subiquity/Welcome:115 finish: completed SUCCESS
+2024-02-08 22:49:23,147 INFO subiquity/Refresh:110 start: starting UI
+2024-02-08 22:49:23,353 INFO subiquity/Refresh:115 finish: completed SUCCESS
+2024-02-08 22:49:23,353 INFO subiquity/Keyboard:110 start: starting UI
+2024-02-08 22:49:25,368 INFO subiquity/Keyboard:115 finish: completed SUCCESS
+2024-02-08 22:49:25,369 INFO subiquity/Refresh:110 start: starting UI

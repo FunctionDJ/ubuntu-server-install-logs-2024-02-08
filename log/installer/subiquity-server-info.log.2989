@@ -1,0 +1,169 @@
+2024-02-08 22:49:36,941 INFO subiquity:199 Starting Subiquity server revision 5270 of snap /snap/subiquity/5270
+2024-02-08 22:49:36,941 INFO subiquity:200 Arguments passed: ['/snap/subiquity/5270/lib/python3.10/site-packages/subiquity/cmd/server.py']
+2024-02-08 22:49:37,732 INFO root:30 start: subiquity/apply_autoinstall_config: 
+2024-02-08 22:49:37,737 INFO root:30 finish: subiquity/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:37,741 ERROR root:30 finish: subiquity/Refresh/check_for_update: FAIL: cancelled
+2024-02-08 22:49:37,742 ERROR root:30 finish: subiquity/Refresh/check_for_update: FAIL: cancelled
+2024-02-08 22:49:37,965 INFO root:30 start: subiquity/Meta/status_GET: 
+2024-02-08 22:49:37,966 INFO root:30 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "cloud_init_ok": tr...
+2024-02-08 22:49:37,967 INFO root:30 start: subiquity/Meta/client_variant_GET: 
+2024-02-08 22:49:37,967 INFO root:30 finish: subiquity/Meta/client_variant_GET: SUCCESS: 200 "server"
+2024-02-08 22:49:37,971 INFO root:30 start: subiquity/Meta/status_GET: 
+2024-02-08 22:49:37,971 INFO root:30 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "cloud_init_ok": tr...
+2024-02-08 22:49:37,971 INFO root:30 start: subiquity/Meta/mark_configured_POST: 
+2024-02-08 22:49:37,971 INFO root:30 finish: subiquity/Meta/mark_configured_POST: SUCCESS: 200 null
+2024-02-08 22:49:37,972 INFO root:30 start: subiquity/Meta/status_GET: 
+2024-02-08 22:49:37,972 INFO root:30 start: subiquity/Meta/client_variant_POST: 
+2024-02-08 22:49:37,972 INFO root:30 finish: subiquity/Meta/client_variant_POST: SUCCESS: 200 null
+2024-02-08 22:49:38,110 INFO probert.lvm:120 b'  3 logical volume(s) in volume group "pve" now active\n'
+2024-02-08 22:49:38,174 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:38,174 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:38,174 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:38,174 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:38,174 ERROR probert.lvm:217 Found duplicate logical volume: pve/data
+2024-02-08 22:49:38,437 INFO curtin:1351 Validating extracted storage config components
+2024-02-08 22:49:38,448 ERROR curtin:1357 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data_tmeta",
+ "name": "data_tmeta",
+ "path": null,
+ "size": "3699376128B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:49:38,448 ERROR curtin:1357 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data_tdata",
+ "name": "data_tdata",
+ "path": null,
+ "size": "362777935872B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:49:38,448 ERROR curtin:1357 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data",
+ "name": "data",
+ "path": null,
+ "size": "362777935872B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:49:38,448 WARNING curtin:1360 Extract storage config does not validate.
+2024-02-08 22:50:10,596 INFO root:30 start: subiquity/Network/apply_config: silent=True
+2024-02-08 22:50:12,958 INFO probert.lvm:120 b'  3 logical volume(s) in volume group "pve" now active\n'
+2024-02-08 22:50:13,022 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:50:13,022 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:50:13,022 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:50:13,023 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:50:13,023 ERROR probert.lvm:217 Found duplicate logical volume: pve/data
+2024-02-08 22:50:13,245 INFO curtin:1351 Validating extracted storage config components
+2024-02-08 22:50:13,255 ERROR curtin:1357 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data_tmeta",
+ "name": "data_tmeta",
+ "path": null,
+ "size": "3699376128B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:50:13,255 ERROR curtin:1357 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data_tdata",
+ "name": "data_tdata",
+ "path": null,
+ "size": "362777935872B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:50:13,255 ERROR curtin:1357 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data",
+ "name": "data",
+ "path": null,
+ "size": "362777935872B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:50:13,255 WARNING curtin:1360 Extract storage config does not validate.
+2024-02-08 22:50:15,830 INFO root:30 finish: subiquity/Network/apply_config: SUCCESS: silent=True
+2024-02-08 22:50:25,634 INFO probert.lvm:120 b'  3 logical volume(s) in volume group "pve" now active\n'
+2024-02-08 22:50:25,693 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:50:25,693 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:50:25,693 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:50:25,694 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:50:25,694 ERROR probert.lvm:217 Found duplicate logical volume: pve/data
+2024-02-08 22:50:25,917 INFO curtin:1351 Validating extracted storage config components
+2024-02-08 22:50:25,927 ERROR curtin:1357 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data_tmeta",
+ "name": "data_tmeta",
+ "path": null,
+ "size": "3699376128B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:50:25,927 ERROR curtin:1357 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data_tdata",
+ "name": "data_tdata",
+ "path": null,
+ "size": "362777935872B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:50:25,927 ERROR curtin:1357 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data",
+ "name": "data",
+ "path": null,
+ "size": "362777935872B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:50:25,927 WARNING curtin:1360 Extract storage config does not validate.
+2024-02-08 22:51:19,045 INFO root:30 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "NEEDS_CONFIRMATION", "confirming_tty": "", "error": null, "cloud_i...
+2024-02-08 22:51:19,046 INFO root:30 start: subiquity/Meta/status_GET: 
+2024-02-08 22:51:20,115 INFO root:30 start: subiquity/Meta/mark_configured_POST: 
+2024-02-08 22:51:20,116 INFO root:30 finish: subiquity/Meta/mark_configured_POST: SUCCESS: 200 null
+2024-02-08 22:51:20,116 INFO root:30 start: subiquity/Meta/confirm_POST: 
+2024-02-08 22:51:20,117 INFO root:30 finish: subiquity/Meta/confirm_POST: SUCCESS: 200 null
+2024-02-08 22:51:20,118 INFO root:30 start: subiquity/Install/install/configure_apt: configuring apt
+2024-02-08 22:51:20,126 INFO root:30 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "RUNNING", "confirming_tty": "/dev/tty1", "error": null, "cloud_ini...
+2024-02-08 22:51:20,128 INFO root:30 start: subiquity/Meta/status_GET: 
+2024-02-08 22:51:26,723 INFO root:30 finish: subiquity/Install/install/configure_apt: SUCCESS: configuring apt
+2024-02-08 22:51:26,724 INFO root:30 start: subiquity/Install/install/curtin_install: installing system
+2024-02-08 22:51:29,775 ERROR root:30 finish: subiquity/Install/install/curtin_install/run_curtin_step/cmd-install/stage-partitioning/builtin/cmd-block-meta/clear-holders: FAIL: removing previous storage devices
+2024-02-08 22:51:29,775 ERROR root:30 finish: subiquity/Install/install/curtin_install/run_curtin_step/cmd-install/stage-partitioning/builtin/cmd-block-meta: FAIL: curtin command block-meta
+2024-02-08 22:51:30,131 ERROR root:30 finish: subiquity/Install/install/curtin_install/run_curtin_step/cmd-install/stage-partitioning/builtin: FAIL: running 'curtin block-meta simple'
+2024-02-08 22:51:30,132 ERROR root:30 finish: subiquity/Install/install/curtin_install/run_curtin_step/cmd-install/stage-partitioning: FAIL: configuring storage
+2024-02-08 22:51:30,747 ERROR root:30 finish: subiquity/Install/install/curtin_install/run_curtin_step: FAIL: Command '['systemd-run', '--wait', '--same-dir', '--property', 'SyslogIdentifier=subiquity_log.2989', '--setenv', 'PATH=/snap/subiquity/5270/bin:/snap/subiquity/5270/usr/bin:/snap/subiquity/5270/usr/sbin:/snap/subiquity/5270/usr/bin:/snap/subiquity/5270/sbin:/snap/subiquity/5270/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/subiquity/5270/bin:/snap/subiquity/5270/sbin', '--setenv', 'PYTHONPATH=:/snap/subiquity/5270/lib/python3.10/site-packages', '--setenv', 'PYTHON=/snap/subiquity/5270/usr/bin/python3.10', '--setenv', 'SNAP=/snap/subiquity/5270', '--', '/snap/subiquity/5270/usr/bin/python3.10', '-m', 'curtin', '--showtrace', '-vvv', '--set', 'json:reporting={"subiquity": {"type": "journald", "identifier": "curtin_event.2989.5"}}', '-c', '/var/log/installer/curtin-install/subiquity-partitioning.conf', 'install', '--set', 'json:stages=["partitioning"]', 'cp:///tmp/tmpo_sy_10e/mount']' returned non-zero exit status 3.
+2024-02-08 22:51:30,748 ERROR root:30 finish: subiquity/Install/install/curtin_install: FAIL: Command '['systemd-run', '--wait', '--same-dir', '--property', 'SyslogIdentifier=subiquity_log.2989', '--setenv', 'PATH=/snap/subiquity/5270/bin:/snap/subiquity/5270/usr/bin:/snap/subiquity/5270/usr/sbin:/snap/subiquity/5270/usr/bin:/snap/subiquity/5270/sbin:/snap/subiquity/5270/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/subiquity/5270/bin:/snap/subiquity/5270/sbin', '--setenv', 'PYTHONPATH=:/snap/subiquity/5270/lib/python3.10/site-packages', '--setenv', 'PYTHON=/snap/subiquity/5270/usr/bin/python3.10', '--setenv', 'SNAP=/snap/subiquity/5270', '--', '/snap/subiquity/5270/usr/bin/python3.10', '-m', 'curtin', '--showtrace', '-vvv', '--set', 'json:reporting={"subiquity": {"type": "journald", "identifier": "curtin_event.2989.5"}}', '-c', '/var/log/installer/curtin-install/subiquity-partitioning.conf', 'install', '--set', 'json:stages=["partitioning"]', 'cp:///tmp/tmpo_sy_10e/mount']' returned non-zero exit status 3.
+2024-02-08 22:51:30,750 INFO subiquity.common.errorreport:415 saving crash report 'install failed crashed with CalledProcessError' to /var/crash/1707432690.748204708.install_fail.crash
+2024-02-08 22:51:30,750 ERROR root:30 finish: subiquity/Install/install: FAIL: Command '['systemd-run', '--wait', '--same-dir', '--property', 'SyslogIdentifier=subiquity_log.2989', '--setenv', 'PATH=/snap/subiquity/5270/bin:/snap/subiquity/5270/usr/bin:/snap/subiquity/5270/usr/sbin:/snap/subiquity/5270/usr/bin:/snap/subiquity/5270/sbin:/snap/subiquity/5270/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/subiquity/5270/bin:/snap/subiquity/5270/sbin', '--setenv', 'PYTHONPATH=:/snap/subiquity/5270/lib/python3.10/site-packages', '--setenv', 'PYTHON=/snap/subiquity/5270/usr/bin/python3.10', '--setenv', 'SNAP=/snap/subiquity/5270', '--', '/snap/subiquity/5270/usr/bin/python3.10', '-m', 'curtin', '--showtrace', '-vvv', '--set', 'json:reporting={"subiquity": {"type": "journald", "identifier": "curtin_event.2989.5"}}', '-c', '/var/log/installer/curtin-install/subiquity-partitioning.conf', 'install', '--set', 'json:stages=["partitioning"]', 'cp:///tmp/tmpo_sy_10e/mount']' returned non-zero exit status 3.
+2024-02-08 22:51:30,750 INFO root:30 start: subiquity/ErrorReporter/1707432690.748204708.install_fail/add_info: 
+2024-02-08 22:51:30,750 ERROR subiquity.server.server:415 top level error
+Traceback (most recent call last):
+  File "/snap/subiquity/5270/lib/python3.10/site-packages/subiquity/server/controllers/shutdown.py", line 73, in _wait_install
+    await self.app.controllers.Install.install_task
+subprocess.CalledProcessError: Command '['systemd-run', '--wait', '--same-dir', '--property', 'SyslogIdentifier=subiquity_log.2989', '--setenv', 'PATH=/snap/subiquity/5270/bin:/snap/subiquity/5270/usr/bin:/snap/subiquity/5270/usr/sbin:/snap/subiquity/5270/usr/bin:/snap/subiquity/5270/sbin:/snap/subiquity/5270/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/subiquity/5270/bin:/snap/subiquity/5270/sbin', '--setenv', 'PYTHONPATH=:/snap/subiquity/5270/lib/python3.10/site-packages', '--setenv', 'PYTHON=/snap/subiquity/5270/usr/bin/python3.10', '--setenv', 'SNAP=/snap/subiquity/5270', '--', '/snap/subiquity/5270/usr/bin/python3.10', '-m', 'curtin', '--showtrace', '-vvv', '--set', 'json:reporting={"subiquity": {"type": "journald", "identifier": "curtin_event.2989.5"}}', '-c', '/var/log/installer/curtin-install/subiquity-partitioning.conf', 'install', '--set', 'json:stages=["partitioning"]', 'cp:///tmp/tmpo_sy_10e/mount']' returned non-zero exit status 3.
+2024-02-08 22:51:30,751 ERROR subiquity.server.server:415 top level error
+Traceback (most recent call last):
+  File "/snap/subiquity/5270/lib/python3.10/site-packages/subiquity/server/controllers/shutdown.py", line 73, in _wait_install
+    await self.app.controllers.Install.install_task
+subprocess.CalledProcessError: Command '['systemd-run', '--wait', '--same-dir', '--property', 'SyslogIdentifier=subiquity_log.2989', '--setenv', 'PATH=/snap/subiquity/5270/bin:/snap/subiquity/5270/usr/bin:/snap/subiquity/5270/usr/sbin:/snap/subiquity/5270/usr/bin:/snap/subiquity/5270/sbin:/snap/subiquity/5270/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/subiquity/5270/bin:/snap/subiquity/5270/sbin', '--setenv', 'PYTHONPATH=:/snap/subiquity/5270/lib/python3.10/site-packages', '--setenv', 'PYTHON=/snap/subiquity/5270/usr/bin/python3.10', '--setenv', 'SNAP=/snap/subiquity/5270', '--', '/snap/subiquity/5270/usr/bin/python3.10', '-m', 'curtin', '--showtrace', '-vvv', '--set', 'json:reporting={"subiquity": {"type": "journald", "identifier": "curtin_event.2989.5"}}', '-c', '/var/log/installer/curtin-install/subiquity-partitioning.conf', 'install', '--set', 'json:stages=["partitioning"]', 'cp:///tmp/tmpo_sy_10e/mount']' returned non-zero exit status 3.
+2024-02-08 22:51:30,752 INFO root:30 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "ERROR", "confirming_tty": "/dev/tty1", "error": {"state": "INCOMPL...
+2024-02-08 22:51:30,754 INFO root:30 start: subiquity/Meta/status_GET: 
+2024-02-08 22:51:30,754 INFO root:30 start: subiquity/Error/wait_GET: 
+2024-02-08 22:51:30,975 INFO root:30 finish: subiquity/ErrorReporter/1707432690.748204708.install_fail/add_info: SUCCESS: written to /var/crash/1707432690.748204708.install_fail.crash
+2024-02-08 22:51:30,975 INFO root:30 finish: subiquity/Error/wait_GET: SUCCESS: 200 {"state": "DONE", "base": "1707432690.748204708.install_fail", "kind": "INSTA...
+2024-02-08 22:51:31,139 ERROR root:30 finish: subiquity/Install/install/curtin_install/run_curtin_step/cmd-install: FAIL: curtin command install

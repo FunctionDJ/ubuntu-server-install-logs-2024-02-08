@@ -1,0 +1,964 @@
+2024-02-08 22:48:56,071 INFO subiquity:163 Starting Subiquity server revision 5004 of snap /snap/subiquity/5004
+2024-02-08 22:48:56,071 INFO subiquity:164 Arguments passed: ['/snap/subiquity/5004/lib/python3.10/site-packages/subiquity/cmd/server.py']
+2024-02-08 22:48:56,071 DEBUG subiquity:165 Kernel commandline: CommandLineParams(_raw='BOOT_IMAGE=/casper/vmlinuz ---\n', _tokens={'---'}, _values={'BOOT_IMAGE': '/casper/vmlinuz'})
+2024-02-08 22:48:56,071 DEBUG subiquity:166 Environment: environ({'PYTHONIOENCODING': 'utf-8', 'SNAP_COMMON': '/var/snap/subiquity/common', 'SNAP_INSTANCE_KEY': '', 'LD_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void:/snap/subiquity/5004/lib:/snap/subiquity/5004/usr/lib:/snap/subiquity/5004/lib/x86_64-linux-gnu:/snap/subiquity/5004/usr/lib/x86_64-linux-gnu', 'SNAP_LIBRARY_PATH': '/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void', 'PYTHON': '/snap/subiquity/5004/usr/bin/python3.10', 'SNAP_USER_DATA': '/root/snap/subiquity/5004', 'SUBIQUITY_ROOT': '/snap/subiquity/5004', 'SYSTEMD_EXEC_PID': '2488', 'SNAP_REVISION': '5004', 'JOURNAL_STREAM': '8:20850', 'SNAP_CONTEXT': 'l-aUUocaIX9TD4RNSaEgQcWhncttcxEsoaQk3hDbj_ufGxwWDtLQ', 'SNAP_VERSION': '23.08.1', 'SNAP_INSTANCE_NAME': 'subiquity', 'PATH': '/snap/subiquity/5004/bin:/snap/subiquity/5004/usr/bin:/snap/subiquity/5004/usr/sbin:/snap/subiquity/5004/usr/bin:/snap/subiquity/5004/sbin:/snap/subiquity/5004/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/subiquity/5004/bin:/snap/subiquity/5004/sbin', 'INVOCATION_ID': '004ffd7666864e629d527da8006096df', 'SNAP_DATA': '/var/snap/subiquity/5004', 'LANG': 'C.UTF-8', 'PY3OR2_PYTHON': '/snap/subiquity/5004/usr/bin/python3.10', 'SNAP_ARCH': 'amd64', 'SNAP_COOKIE': 'l-aUUocaIX9TD4RNSaEgQcWhncttcxEsoaQk3hDbj_ufGxwWDtLQ', 'SNAP_USER_COMMON': '/root/snap/subiquity/common', 'SNAP_REEXEC': '', 'SNAP_NAME': 'subiquity', 'PWD': '/var/snap/subiquity/5004', 'SNAP_REAL_HOME': '/root', 'SNAP': '/snap/subiquity/5004', 'PYTHONPATH': ':/snap/subiquity/5004/lib/python3.10/site-packages', 'APPORT_DATA_DIR': '/snap/subiquity/5004/share/apport'})
+2024-02-08 22:48:56,071 DEBUG asyncio:54 Using selector: EpollSelector
+2024-02-08 22:48:56,072 DEBUG subiquitycore.prober:34 Prober() init finished, data:None
+2024-02-08 22:48:56,094 DEBUG curtin:87 Running command ['dpkg', '--print-architecture'] with allowed return codes [0] (capture=True)
+2024-02-08 22:48:56,098 DEBUG subiquitycore.netplan:109 config for zz-all-en = {'dhcp4': True, 'match': {'name': 'en*'}}
+2024-02-08 22:48:56,098 DEBUG subiquitycore.netplan:109 config for zz-all-eth = {'dhcp4': True, 'match': {'name': 'eth*'}}
+2024-02-08 22:48:56,103 DEBUG subiquitycore.utils:96 arun_command called: ['cloud-init', 'status', '--wait']
+2024-02-08 22:48:57,106 DEBUG curtin.reporting.start.subiquity/Meta/status_GET:45 start: subiquity/Meta/status_GET: 
+2024-02-08 22:48:57,106 DEBUG curtin.reporting.finish.subiquity/Meta/status_GET:45 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "CLOUD_INIT_WAIT", "confirming_tty": "", "error": null, "cloud_init...
+2024-02-08 22:48:57,106 INFO aiohttp.access:206  [08/Feb/2024:22:48:57 +0000] "GET /meta/status?cur=null HTTP/1.1" 200 420 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:48:57,120 DEBUG curtin.reporting.start.subiquity/Meta/status_GET:45 start: subiquity/Meta/status_GET: 
+2024-02-08 22:49:07,191 DEBUG subiquitycore.utils:106 arun_command ['cloud-init', 'status', '--wait'] exited with code 0
+2024-02-08 22:49:07,191 DEBUG subiquity.server.server:531 waited 11.087796688079834s for cloud-init
+2024-02-08 22:49:07,191 DEBUG subiquity.server.server:533 loading cloud config
+2024-02-08 22:49:07,192 DEBUG cloudinit.util:1536 Reading from /etc/cloud/cloud.cfg (quiet=False)
+2024-02-08 22:49:07,192 DEBUG cloudinit.util:1547 Read 3487 bytes from /etc/cloud/cloud.cfg
+2024-02-08 22:49:07,192 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 3487 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,201 DEBUG cloudinit.util:1536 Reading from /etc/cloud/cloud.cfg.d/90_dpkg.cfg (quiet=False)
+2024-02-08 22:49:07,201 DEBUG cloudinit.util:1547 Read 320 bytes from /etc/cloud/cloud.cfg.d/90_dpkg.cfg
+2024-02-08 22:49:07,201 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 320 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,203 DEBUG cloudinit.util:1536 Reading from /etc/cloud/cloud.cfg.d/06_quiet.cfg (quiet=False)
+2024-02-08 22:49:07,203 DEBUG cloudinit.util:1547 Read 112 bytes from /etc/cloud/cloud.cfg.d/06_quiet.cfg
+2024-02-08 22:49:07,203 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 112 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,203 DEBUG cloudinit.util:1536 Reading from /etc/cloud/cloud.cfg.d/05_logging.cfg (quiet=False)
+2024-02-08 22:49:07,203 DEBUG cloudinit.util:1547 Read 2070 bytes from /etc/cloud/cloud.cfg.d/05_logging.cfg
+2024-02-08 22:49:07,204 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 2070 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,209 DEBUG cloudinit.util:1536 Reading from /run/cloud-init/cloud.cfg (quiet=False)
+2024-02-08 22:49:07,209 DEBUG cloudinit.util:1547 Read 35 bytes from /run/cloud-init/cloud.cfg
+2024-02-08 22:49:07,209 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 35 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,210 DEBUG cloudinit.subp:245 Running command ['systemd-detect-virt', '--quiet', '--container'] with allowed return codes [0] (shell=False, capture=True)
+2024-02-08 22:49:07,213 DEBUG cloudinit.util:1536 Reading from /etc/os-release (quiet=False)
+2024-02-08 22:49:07,213 DEBUG cloudinit.util:1547 Read 386 bytes from /etc/os-release
+2024-02-08 22:49:07,214 DEBUG cloudinit.util:1536 Reading from /proc/1/environ (quiet=False)
+2024-02-08 22:49:07,214 DEBUG cloudinit.util:1547 Read 266 bytes from /proc/1/environ
+2024-02-08 22:49:07,214 DEBUG cloudinit.util:1536 Reading from /proc/self/status (quiet=False)
+2024-02-08 22:49:07,214 DEBUG cloudinit.util:1547 Read 1391 bytes from /proc/self/status
+2024-02-08 22:49:07,214 DEBUG cloudinit.util:1536 Reading from /proc/cmdline (quiet=False)
+2024-02-08 22:49:07,214 DEBUG cloudinit.util:1547 Read 31 bytes from /proc/cmdline
+2024-02-08 22:49:07,214 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 0 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,214 DEBUG cloudinit.util:956 loaded blob returned None, returning default.
+2024-02-08 22:49:07,214 DEBUG cloudinit.util:1536 Reading from /var/lib/cloud/instance/cloud-config.txt (quiet=False)
+2024-02-08 22:49:07,215 DEBUG cloudinit.util:1547 Read 0 bytes from /var/lib/cloud/instance/cloud-config.txt
+2024-02-08 22:49:07,215 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 0 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,215 DEBUG cloudinit.util:956 loaded blob returned None, returning default.
+2024-02-08 22:49:07,215 DEBUG cloudinit.util:1536 Reading from /var/lib/cloud/instance/obj.pkl (quiet=False)
+2024-02-08 22:49:07,215 DEBUG cloudinit.util:1547 Read 7703 bytes from /var/lib/cloud/instance/obj.pkl
+2024-02-08 22:49:07,222 DEBUG cloudinit.util:1536 Reading from /run/cloud-init/.instance-id (quiet=False)
+2024-02-08 22:49:07,222 DEBUG cloudinit.util:1547 Read 8 bytes from /run/cloud-init/.instance-id
+2024-02-08 22:49:07,222 DEBUG cloudinit.stages:320 restored from cache with run check: DataSourceNoCloud [seed=/var/lib/cloud/seed/nocloud][dsmode=net]
+2024-02-08 22:49:07,222 DEBUG cloudinit.util:1536 Reading from /etc/cloud/cloud.cfg (quiet=False)
+2024-02-08 22:49:07,223 DEBUG cloudinit.util:1547 Read 3487 bytes from /etc/cloud/cloud.cfg
+2024-02-08 22:49:07,223 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 3487 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,227 DEBUG cloudinit.util:1536 Reading from /etc/cloud/cloud.cfg.d/90_dpkg.cfg (quiet=False)
+2024-02-08 22:49:07,227 DEBUG cloudinit.util:1547 Read 320 bytes from /etc/cloud/cloud.cfg.d/90_dpkg.cfg
+2024-02-08 22:49:07,227 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 320 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,228 DEBUG cloudinit.util:1536 Reading from /etc/cloud/cloud.cfg.d/06_quiet.cfg (quiet=False)
+2024-02-08 22:49:07,228 DEBUG cloudinit.util:1547 Read 112 bytes from /etc/cloud/cloud.cfg.d/06_quiet.cfg
+2024-02-08 22:49:07,228 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 112 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,228 DEBUG cloudinit.util:1536 Reading from /etc/cloud/cloud.cfg.d/05_logging.cfg (quiet=False)
+2024-02-08 22:49:07,228 DEBUG cloudinit.util:1547 Read 2070 bytes from /etc/cloud/cloud.cfg.d/05_logging.cfg
+2024-02-08 22:49:07,228 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 2070 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,230 DEBUG cloudinit.util:1536 Reading from /run/cloud-init/cloud.cfg (quiet=False)
+2024-02-08 22:49:07,230 DEBUG cloudinit.util:1547 Read 35 bytes from /run/cloud-init/cloud.cfg
+2024-02-08 22:49:07,230 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 35 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,230 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 0 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,230 DEBUG cloudinit.util:956 loaded blob returned None, returning default.
+2024-02-08 22:49:07,230 DEBUG cloudinit.util:1536 Reading from /var/lib/cloud/instance/cloud-config.txt (quiet=False)
+2024-02-08 22:49:07,230 DEBUG cloudinit.util:1547 Read 0 bytes from /var/lib/cloud/instance/cloud-config.txt
+2024-02-08 22:49:07,230 DEBUG cloudinit.util:948 Attempting to load yaml from string of length 0 with allowed root types (<class 'dict'>,)
+2024-02-08 22:49:07,231 DEBUG cloudinit.util:956 loaded blob returned None, returning default.
+2024-02-08 22:49:07,231 DEBUG cloudinit.stages:136 Using distro class <class 'cloudinit.distros.ubuntu.Distro'>
+2024-02-08 22:49:07,231 DEBUG subiquitycore.utils:68 run_command called: ['ssh-keygen', '-lf', '/home/installer/.ssh/authorized_keys']
+2024-02-08 22:49:07,234 DEBUG subiquitycore.utils:81 run_command ['ssh-keygen', '-lf', '/home/installer/.ssh/authorized_keys'] exited with code 255
+2024-02-08 22:49:07,234 DEBUG subiquitycore.ssh:53 ssh-keygen -lf /home/installer/.ssh/authorized_keys failed '/home/installer/.ssh/authorized_keys is not a public key file.\r\n'
+2024-02-08 22:49:07,234 DEBUG subiquitycore.utils:68 run_command called: chpasswd
+2024-02-08 22:49:07,253 DEBUG subiquitycore.utils:81 run_command chpasswd exited with code 0
+2024-02-08 22:49:07,254 DEBUG subiquity.server.server:478 load_autoinstall_config only_early True file None
+2024-02-08 22:49:07,254 DEBUG subiquity.server.server:478 load_autoinstall_config only_early False file None
+2024-02-08 22:49:07,254 DEBUG subiquitycore.core:123 starting controllers
+2024-02-08 22:49:07,254 DEBUG subiquity.server.controllers.kernel:66 Using kernel linux-generic due to /run/kernel-meta-package
+2024-02-08 22:49:07,258 DEBUG subiquity.models.source:76 loaded 2 sources from '/cdrom/casper/install-sources.yaml'
+2024-02-08 22:49:07,259 DEBUG probert.network:585 event for link_change: NEW {'ifindex': 1, 'flags': 65609, 'arptype': 772, 'family': 0, 'is_vlan': False, 'name': b'lo'}
+2024-02-08 22:49:07,259 DEBUG probert.network:585 event for link_change: NEW {'ifindex': 2, 'flags': 69699, 'arptype': 1, 'family': 0, 'is_vlan': False, 'name': b'enp4s0'}
+2024-02-08 22:49:07,259 DEBUG probert.network:585 event for addr_change: NEW {'ifindex': 1, 'flags': 128, 'family': 2, 'scope': 254, 'local': b'127.0.0.1/8'}
+2024-02-08 22:49:07,259 DEBUG probert.network:585 event for addr_change: NEW {'ifindex': 2, 'flags': 0, 'family': 2, 'scope': 0, 'local': b'10.0.0.74/24'}
+2024-02-08 22:49:07,259 DEBUG probert.network:585 event for addr_change: NEW {'ifindex': 1, 'flags': 128, 'family': 10, 'scope': 254, 'local': b'::1'}
+2024-02-08 22:49:07,259 DEBUG probert.network:585 event for addr_change: NEW {'ifindex': 2, 'flags': 512, 'family': 10, 'scope': 0, 'local': b'2a02:8109:253f:d098::1545'}
+2024-02-08 22:49:07,259 DEBUG probert.network:585 event for addr_change: NEW {'ifindex': 2, 'flags': 768, 'family': 10, 'scope': 0, 'local': b'2a02:8109:253f:d098:9e6b:ff:fe1e:6b48/64'}
+2024-02-08 22:49:07,259 DEBUG probert.network:585 event for addr_change: NEW {'ifindex': 2, 'flags': 128, 'family': 10, 'scope': 253, 'local': b'fe80::9e6b:ff:fe1e:6b48/64'}
+2024-02-08 22:49:07,259 DEBUG probert.network:672 link_change NEW {'ifindex': 1, 'flags': 65609, 'arptype': 772, 'family': 0, 'is_vlan': False, 'name': b'lo'}
+2024-02-08 22:49:07,294 DEBUG subiquitycore.models.network:436 new_link 1 lo lo
+2024-02-08 22:49:07,294 DEBUG subiquitycore.models.network:438 ignoring based on type
+2024-02-08 22:49:07,294 DEBUG probert.network:672 link_change NEW {'ifindex': 2, 'flags': 69699, 'arptype': 1, 'family': 0, 'is_vlan': False, 'name': b'enp4s0'}
+2024-02-08 22:49:07,331 DEBUG subiquitycore.models.network:436 new_link 2 enp4s0 eth
+2024-02-08 22:49:07,331 DEBUG subiquitycore.models.network:467 new_link 2 enp4s0 with config {'dhcp4': True}
+2024-02-08 22:49:07,331 DEBUG root:37 start: subiquity/Network/_send_update: NEW enp4s0
+2024-02-08 22:49:07,331 DEBUG subiquity.server.controllers.network:368 dev_info enp4s0 {'dhcp4': True}
+2024-02-08 22:49:07,331 DEBUG root:37 finish: subiquity/Network/_send_update: SUCCESS: NEW enp4s0
+2024-02-08 22:49:07,331 DEBUG probert.network:717 addr_change NEW {'ifindex': 1, 'flags': 128, 'family': 2, 'scope': 254, 'local': b'127.0.0.1/8'}
+2024-02-08 22:49:07,331 DEBUG probert.network:717 addr_change NEW {'ifindex': 2, 'flags': 0, 'family': 2, 'scope': 0, 'local': b'10.0.0.74/24'}
+2024-02-08 22:49:07,332 DEBUG root:37 start: subiquity/Network/_send_update: CHANGE enp4s0
+2024-02-08 22:49:07,332 DEBUG subiquity.server.controllers.network:368 dev_info enp4s0 {'dhcp4': True}
+2024-02-08 22:49:07,332 DEBUG root:37 finish: subiquity/Network/_send_update: SUCCESS: CHANGE enp4s0
+2024-02-08 22:49:07,332 DEBUG probert.network:717 addr_change NEW {'ifindex': 1, 'flags': 128, 'family': 10, 'scope': 254, 'local': b'::1'}
+2024-02-08 22:49:07,332 DEBUG probert.network:717 addr_change NEW {'ifindex': 2, 'flags': 512, 'family': 10, 'scope': 0, 'local': b'2a02:8109:253f:d098::1545'}
+2024-02-08 22:49:07,332 DEBUG root:37 start: subiquity/Network/_send_update: CHANGE enp4s0
+2024-02-08 22:49:07,332 DEBUG subiquity.server.controllers.network:368 dev_info enp4s0 {'dhcp4': True}
+2024-02-08 22:49:07,332 DEBUG root:37 finish: subiquity/Network/_send_update: SUCCESS: CHANGE enp4s0
+2024-02-08 22:49:07,332 DEBUG probert.network:717 addr_change NEW {'ifindex': 2, 'flags': 768, 'family': 10, 'scope': 0, 'local': b'2a02:8109:253f:d098:9e6b:ff:fe1e:6b48/64'}
+2024-02-08 22:49:07,332 DEBUG root:37 start: subiquity/Network/_send_update: CHANGE enp4s0
+2024-02-08 22:49:07,332 DEBUG subiquity.server.controllers.network:368 dev_info enp4s0 {'dhcp4': True}
+2024-02-08 22:49:07,332 DEBUG root:37 finish: subiquity/Network/_send_update: SUCCESS: CHANGE enp4s0
+2024-02-08 22:49:07,332 DEBUG probert.network:717 addr_change NEW {'ifindex': 2, 'flags': 128, 'family': 10, 'scope': 253, 'local': b'fe80::9e6b:ff:fe1e:6b48/64'}
+2024-02-08 22:49:07,332 DEBUG root:37 start: subiquity/Network/_send_update: CHANGE enp4s0
+2024-02-08 22:49:07,332 DEBUG subiquity.server.controllers.network:368 dev_info enp4s0 {'dhcp4': True}
+2024-02-08 22:49:07,332 DEBUG root:37 finish: subiquity/Network/_send_update: SUCCESS: CHANGE enp4s0
+2024-02-08 22:49:07,332 DEBUG probert.network:731 route_change NEW {'family': 2, 'type': 1, 'table': 254, 'dst': b'default', 'ifindex': 2}
+2024-02-08 22:49:07,349 DEBUG pyroute2.ndb.139768534664528.sources.localhost:74 init
+2024-02-08 22:49:07,349 DEBUG pyroute2.ndb.139768534664528.sources.localhost:384 starting the source
+2024-02-08 22:49:07,349 DEBUG pyroute2.ndb.139768534664528.sources.localhost/nsmanager:74 init
+2024-02-08 22:49:07,349 DEBUG pyroute2.ndb.139768534664528.sources.localhost:74 connecting
+2024-02-08 22:49:07,350 DEBUG pyroute2.ndb.139768534664528.sources.localhost:74 loading
+2024-02-08 22:49:07,350 DEBUG pyroute2.ndb.139768534664528.sources.localhost/nsmanager:384 starting the source
+2024-02-08 22:49:07,350 DEBUG pyroute2.ndb.139768534664528.sources.localhost/nsmanager:74 connecting
+2024-02-08 22:49:07,351 DEBUG pyroute2.ndb.139768534664528.sources.localhost/nsmanager:74 loading
+2024-02-08 22:49:07,362 DEBUG pyroute2.ndb.139768534664528.sources.localhost:74 running
+2024-02-08 22:49:07,362 DEBUG pyroute2.ndb.139768534664528.sources.localhost/nsmanager:74 running
+2024-02-08 22:49:07,363 DEBUG pyroute2.ndb.139768534664528.sources.localhost:399 source shutdown
+2024-02-08 22:49:07,363 DEBUG pyroute2.ndb.139768534664528.sources.localhost:374 sync
+2024-02-08 22:49:07,363 DEBUG pyroute2.ndb.139768534664528.sources.localhost:369 shutdown handled by the main thread
+2024-02-08 22:49:07,363 DEBUG pyroute2.ndb.139768534664528.sources.localhost:74 stopped
+2024-02-08 22:49:07,363 DEBUG pyroute2.ndb.139768534664528.main:851 flush DB for the target localhost
+2024-02-08 22:49:07,364 DEBUG pyroute2.ndb.139768534664528.sources.localhost/nsmanager:399 source shutdown
+2024-02-08 22:49:07,377 DEBUG pyroute2.ndb.139768534664528.sources.localhost/nsmanager:374 sync
+2024-02-08 22:49:07,377 DEBUG pyroute2.ndb.139768534664528.sources.localhost/nsmanager:369 shutdown handled by the main thread
+2024-02-08 22:49:07,377 DEBUG pyroute2.ndb.139768534664528.sources.localhost/nsmanager:74 stopped
+2024-02-08 22:49:07,377 DEBUG pyroute2.ndb.139768534664528.main:851 flush DB for the target localhost/nsmanager
+2024-02-08 22:49:07,378 DEBUG subiquitycore.controllers.network:110 default routes True
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 2, 'type': 1, 'table': 254, 'dst': b'10.0.0.0/24', 'ifindex': 2}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 2, 'type': 1, 'table': 254, 'dst': b'10.0.0.1', 'ifindex': 2}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 2, 'type': 1, 'table': 254, 'dst': b'10.0.1.2', 'ifindex': 2}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 2, 'type': 2, 'table': 255, 'dst': b'10.0.0.74', 'ifindex': 2}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 2, 'type': 3, 'table': 255, 'dst': b'10.0.0.255', 'ifindex': 2}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 2, 'type': 2, 'table': 255, 'dst': b'127.0.0.0/8', 'ifindex': 1}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 2, 'type': 2, 'table': 255, 'dst': b'127.0.0.1', 'ifindex': 1}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 2, 'type': 3, 'table': 255, 'dst': b'127.255.255.255', 'ifindex': 1}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 10, 'type': 1, 'table': 254, 'dst': b'::1', 'ifindex': 1}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 10, 'type': 1, 'table': 254, 'dst': b'2a02:8109:253f:d098::/64', 'ifindex': 2}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 10, 'type': 1, 'table': 254, 'dst': b'fe80::/64', 'ifindex': 2}
+2024-02-08 22:49:07,378 DEBUG probert.network:731 route_change NEW {'family': 10, 'type': 1, 'table': 254, 'dst': b'default', 'ifindex': 2}
+2024-02-08 22:49:07,384 DEBUG pyroute2.ndb.139768534248528.sources.localhost:74 init
+2024-02-08 22:49:07,384 DEBUG pyroute2.ndb.139768534248528.sources.localhost:384 starting the source
+2024-02-08 22:49:07,385 DEBUG pyroute2.ndb.139768534248528.sources.localhost/nsmanager:74 init
+2024-02-08 22:49:07,385 DEBUG pyroute2.ndb.139768534248528.sources.localhost:74 connecting
+2024-02-08 22:49:07,385 DEBUG pyroute2.ndb.139768534248528.sources.localhost:74 loading
+2024-02-08 22:49:07,385 DEBUG pyroute2.ndb.139768534248528.sources.localhost/nsmanager:384 starting the source
+2024-02-08 22:49:07,385 DEBUG pyroute2.ndb.139768534248528.sources.localhost/nsmanager:74 connecting
+2024-02-08 22:49:07,386 DEBUG pyroute2.ndb.139768534248528.sources.localhost/nsmanager:74 loading
+2024-02-08 22:49:07,395 DEBUG pyroute2.ndb.139768534248528.sources.localhost:74 running
+2024-02-08 22:49:07,396 DEBUG pyroute2.ndb.139768534248528.sources.localhost/nsmanager:74 running
+2024-02-08 22:49:07,397 DEBUG pyroute2.ndb.139768534248528.sources.localhost:399 source shutdown
+2024-02-08 22:49:07,397 DEBUG pyroute2.ndb.139768534248528.sources.localhost:374 sync
+2024-02-08 22:49:07,397 DEBUG pyroute2.ndb.139768534248528.sources.localhost:369 shutdown handled by the main thread
+2024-02-08 22:49:07,397 DEBUG pyroute2.ndb.139768534248528.sources.localhost:74 stopped
+2024-02-08 22:49:07,397 DEBUG pyroute2.ndb.139768534248528.main:851 flush DB for the target localhost
+2024-02-08 22:49:07,398 DEBUG pyroute2.ndb.139768534248528.sources.localhost/nsmanager:399 source shutdown
+2024-02-08 22:49:07,417 DEBUG pyroute2.ndb.139768534248528.sources.localhost/nsmanager:374 sync
+2024-02-08 22:49:07,417 DEBUG pyroute2.ndb.139768534248528.sources.localhost/nsmanager:369 shutdown handled by the main thread
+2024-02-08 22:49:07,417 DEBUG pyroute2.ndb.139768534248528.sources.localhost/nsmanager:74 stopped
+2024-02-08 22:49:07,417 DEBUG pyroute2.ndb.139768534248528.main:851 flush DB for the target localhost/nsmanager
+2024-02-08 22:49:07,418 DEBUG subiquitycore.controllers.network:110 default routes True
+2024-02-08 22:49:07,418 DEBUG probert.network:731 route_change NEW {'family': 10, 'type': 2, 'table': 255, 'dst': b'::1', 'ifindex': 1}
+2024-02-08 22:49:07,418 DEBUG probert.network:731 route_change NEW {'family': 10, 'type': 2, 'table': 255, 'dst': b'2a02:8109:253f:d098::1545', 'ifindex': 2}
+2024-02-08 22:49:07,418 DEBUG probert.network:731 route_change NEW {'family': 10, 'type': 2, 'table': 255, 'dst': b'2a02:8109:253f:d098:9e6b:ff:fe1e:6b48', 'ifindex': 2}
+2024-02-08 22:49:07,418 DEBUG probert.network:731 route_change NEW {'family': 10, 'type': 2, 'table': 255, 'dst': b'fe80::9e6b:ff:fe1e:6b48', 'ifindex': 2}
+2024-02-08 22:49:07,418 DEBUG probert.network:731 route_change NEW {'family': 10, 'type': 5, 'table': 255, 'dst': b'ff00::/8', 'ifindex': 2}
+2024-02-08 22:49:07,461 DEBUG subiquitycore.core:126 controllers started
+2024-02-08 22:49:07,461 INFO root:37 start: subiquity/apply_autoinstall_config: 
+2024-02-08 22:49:07,461 DEBUG root:37 start: subiquity/Early/apply_autoinstall_config: 
+2024-02-08 22:49:07,462 DEBUG root:37 finish: subiquity/Early/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,462 DEBUG root:37 start: subiquity/Reporting/apply_autoinstall_config: 
+2024-02-08 22:49:07,463 DEBUG root:37 finish: subiquity/Reporting/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,463 DEBUG root:37 start: subiquity/Error/apply_autoinstall_config: 
+2024-02-08 22:49:07,463 DEBUG root:37 finish: subiquity/Error/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,463 DEBUG root:37 start: subiquity/Userdata/apply_autoinstall_config: 
+2024-02-08 22:49:07,463 DEBUG root:37 finish: subiquity/Userdata/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,463 DEBUG subiquity.models.subiquity:253 model userdata for postinstall stage is configured, to go {'snaplist', 'locale', 'ubuntu_pro', 'network', 'ssh', 'packages', 'drivers', 'identity'}
+2024-02-08 22:49:07,463 DEBUG root:37 start: subiquity/Package/apply_autoinstall_config: 
+2024-02-08 22:49:07,463 DEBUG root:37 finish: subiquity/Package/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,463 DEBUG subiquity.models.subiquity:253 model packages for postinstall stage is configured, to go {'snaplist', 'ubuntu_pro', 'network', 'ssh', 'identity', 'drivers', 'locale'}
+2024-02-08 22:49:07,464 DEBUG root:37 start: subiquity/Debconf/apply_autoinstall_config: 
+2024-02-08 22:49:07,464 DEBUG root:37 finish: subiquity/Debconf/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,464 DEBUG subiquity.models.subiquity:253 model debconf_selections for install stage is configured, to go {'network', 'filesystem', 'mirror', 'kernel', 'proxy', 'source', 'keyboard'}
+2024-02-08 22:49:07,464 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Locale as interactive
+2024-02-08 22:49:07,464 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Refresh as interactive
+2024-02-08 22:49:07,464 DEBUG root:37 start: subiquity/Kernel/apply_autoinstall_config: 
+2024-02-08 22:49:07,464 DEBUG root:37 finish: subiquity/Kernel/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,464 DEBUG subiquity.models.subiquity:253 model kernel for install stage is configured, to go {'network', 'filesystem', 'mirror', 'proxy', 'source', 'keyboard'}
+2024-02-08 22:49:07,464 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Integrity as interactive
+2024-02-08 22:49:07,464 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Keyboard as interactive
+2024-02-08 22:49:07,465 DEBUG root:37 start: subiquity/Zdev/apply_autoinstall_config: 
+2024-02-08 22:49:07,465 DEBUG root:37 finish: subiquity/Zdev/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Source as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Network as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping UbuntuPro as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Proxy as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Mirror as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Filesystem as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Identity as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping SSH as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping SnapList as interactive
+2024-02-08 22:49:07,465 DEBUG root:37 start: subiquity/Ad/apply_autoinstall_config: 
+2024-02-08 22:49:07,465 DEBUG root:37 finish: subiquity/Ad/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Codecs as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Drivers as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping TimeZone as interactive
+2024-02-08 22:49:07,465 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Install as interactive
+2024-02-08 22:49:07,466 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Updates as interactive
+2024-02-08 22:49:07,466 DEBUG root:37 start: subiquity/Late/apply_autoinstall_config: 
+2024-02-08 22:49:07,466 DEBUG root:37 finish: subiquity/Late/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,466 DEBUG subiquity.server.server:470 apply_autoinstall_config: skipping Shutdown as interactive
+2024-02-08 22:49:07,466 INFO root:37 finish: subiquity/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,466 INFO root:37 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "cloud_init_ok": tr...
+2024-02-08 22:49:07,466 INFO aiohttp.access:206  [08/Feb/2024:22:48:57 +0000] "GET /meta/status?cur=%22CLOUD_INIT_WAIT%22 HTTP/1.1" 200 412 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:07,466 DEBUG subiquity.models.subiquity:253 model locale for postinstall stage is configured, to go {'snaplist', 'ubuntu_pro', 'network', 'ssh', 'drivers', 'identity'}
+2024-02-08 22:49:07,466 DEBUG root:37 start: subiquity/Refresh/configure_snapd: 
+2024-02-08 22:49:07,467 DEBUG root:37 start: subiquity/Refresh/configure_snapd/get_details: 
+2024-02-08 22:49:07,467 DEBUG root:37 start: subiquity/Refresh/check_for_update: 
+2024-02-08 22:49:07,468 DEBUG root:37 start: subiquity/Install/install: 
+2024-02-08 22:49:07,469 DEBUG subiquity.server.controllers.snaplist:87 loading list of snaps
+2024-02-08 22:49:07,476 DEBUG subiquity.server.controllers.snaplist:87 loading list of snaps
+2024-02-08 22:49:07,477 DEBUG root:37 start: subiquity/Filesystem/_probe: 
+2024-02-08 22:49:07,477 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/snaps/subiquity HTTP/1.1" 200 1294
+2024-02-08 22:49:07,477 DEBUG root:37 start: subiquity/Refresh/check_for_update: 
+2024-02-08 22:49:07,477 DEBUG root:37 start: subiquity/Refresh/check_for_update: 
+2024-02-08 22:49:07,477 DEBUG root:37 start: subiquity/SnapList/loader: 
+2024-02-08 22:49:07,477 DEBUG root:37 start: subiquity/Filesystem/_probe/probe_once: restricted=False
+2024-02-08 22:49:07,478 ERROR root:37 finish: subiquity/Refresh/check_for_update: FAIL: cancelled
+2024-02-08 22:49:07,478 ERROR root:37 finish: subiquity/Refresh/check_for_update: FAIL: cancelled
+2024-02-08 22:49:07,478 DEBUG root:37 start: subiquity/SnapList/loader/list: 
+2024-02-08 22:49:07,478 INFO root:37 start: subiquity/Meta/client_variant_GET: 
+2024-02-08 22:49:07,478 INFO root:37 finish: subiquity/Meta/client_variant_GET: SUCCESS: 200 "server"
+2024-02-08 22:49:07,479 INFO aiohttp.access:206  [08/Feb/2024:22:49:07 +0000] "GET /meta/client_variant HTTP/1.1" 200 194 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:07,479 DEBUG root:37 finish: subiquity/Refresh/configure_snapd/get_details: SUCCESS: current version of snap is: '23.08.1'
+2024-02-08 22:49:07,481 DEBUG subiquity.server.controllers.refresh:148 snap tracking , not resetting based on .disk/info
+2024-02-08 22:49:07,481 DEBUG root:37 finish: subiquity/Refresh/configure_snapd: SUCCESS: 
+2024-02-08 22:49:07,484 INFO root:37 start: subiquity/Meta/status_GET: 
+2024-02-08 22:49:07,485 INFO root:37 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "cloud_init_ok": tr...
+2024-02-08 22:49:07,485 INFO aiohttp.access:206  [08/Feb/2024:22:49:07 +0000] "GET /meta/status?cur=null HTTP/1.1" 200 412 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:07,485 INFO root:37 start: subiquity/Meta/client_variant_POST: 
+2024-02-08 22:49:07,485 INFO root:37 finish: subiquity/Meta/client_variant_POST: SUCCESS: 200 null
+2024-02-08 22:49:07,485 INFO aiohttp.access:206  [08/Feb/2024:22:49:07 +0000] "POST /meta/client_variant?variant=%22server%22 HTTP/1.1" 200 190 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:07,485 INFO root:37 start: subiquity/Meta/status_GET: 
+2024-02-08 22:49:07,486 DEBUG root:37 start: subiquity/Locale/GET: 
+2024-02-08 22:49:07,486 DEBUG root:37 finish: subiquity/Locale/GET: SUCCESS: 200 "C.UTF-8"
+2024-02-08 22:49:07,486 INFO aiohttp.access:206  [08/Feb/2024:22:49:07 +0000] "GET /locale HTTP/1.1" 200 195 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:07,507 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?section=server HTTP/1.1" 200 None
+2024-02-08 22:49:07,508 DEBUG root:37 finish: subiquity/SnapList/loader/list: SUCCESS: 
+2024-02-08 22:49:07,508 DEBUG subiquity.server.controllers.snaplist:100 fetched list of 22 snaps
+2024-02-08 22:49:07,508 DEBUG root:37 start: subiquity/SnapList/loader/fetch/microk8s: 
+2024-02-08 22:49:07,737 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=microk8s HTTP/1.1" 200 None
+2024-02-08 22:49:07,743 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/microk8s: SUCCESS: 
+2024-02-08 22:49:07,743 DEBUG root:37 start: subiquity/SnapList/loader/fetch/nextcloud: 
+2024-02-08 22:49:07,780 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?select=refresh HTTP/1.1" 200 None
+2024-02-08 22:49:07,781 DEBUG subiquity.server.controllers.refresh:211 check_for_update received [Snap(id='DLqre5XGLbDqg9jPtiAhRRjDuPVa5X1q', name='core20', status=<SnapStatus.AVAILABLE: 'available'>, version='20231123', revision='2105', channel='latest/stable', publisher=Publisher(id='canonical', username='canonical', display_name='Canonical')), Snap(id='J60k4JY0HppjwOjW8dZdYc8obXKxujRu', name='lxd', status=<SnapStatus.AVAILABLE: 'available'>, version='5.0.3-51452c3', revision='26881', channel='5.0/stable', publisher=Publisher(id='canonical', username='canonical', display_name='Canonical')), Snap(id='PMrrV4ml8uWuEUDBT8dSGnKUYbevVhc4', name='snapd', status=<SnapStatus.AVAILABLE: 'available'>, version='2.61.1', revision='20671', channel='latest/stable', publisher=Publisher(id='canonical', username='canonical', display_name='Canonical')), Snap(id='amcUKQILKXHHTlmSa7NMdnXSx02dNeeT', name='core22', status=<SnapStatus.AVAILABLE: 'available'>, version='20231123', revision='1033', channel='latest/stable', publisher=Publisher(id='canonical', username='canonical', display_name='Canonical')), Snap(id='ba2aj8guta0zSRlT3QM5aJNAUXPlBtf9', name='subiquity', status=<SnapStatus.AVAILABLE: 'available'>, version='23.10.1', revision='5270', channel='latest/stable', publisher=Publisher(id='canonical', username='canonical', display_name='Canonical'))]
+2024-02-08 22:49:07,781 DEBUG root:37 finish: subiquity/Refresh/check_for_update: SUCCESS: new version of snap available: '23.10.1'
+2024-02-08 22:49:07,868 DEBUG probert.utils:62 Command `/usr/sbin/dumpe2fs -h /dev/sda4` exited with result: 0
+2024-02-08 22:49:07,868 DEBUG probert.utils:47 stdout: ------------------------------------------
+2024-02-08 22:49:07,868 DEBUG probert.utils:49 Filesystem volume name:   writable
+2024-02-08 22:49:07,868 DEBUG probert.utils:49 Last mounted on:          /root/var/crash
+2024-02-08 22:49:07,868 DEBUG probert.utils:49 Filesystem UUID:          7fee4cbc-f6fc-41a9-84fe-36f947533bb6
+2024-02-08 22:49:07,868 DEBUG probert.utils:49 Filesystem magic number:  0xEF53
+2024-02-08 22:49:07,868 DEBUG probert.utils:49 Filesystem revision #:    1 (dynamic)
+2024-02-08 22:49:07,868 DEBUG probert.utils:49 Filesystem features:      has_journal ext_attr resize_inode dir_index filetype needs_recovery extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+2024-02-08 22:49:07,868 DEBUG probert.utils:49 Filesystem flags:         signed_directory_hash 
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Default mount options:    user_xattr acl
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Filesystem state:         clean
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Errors behavior:          Continue
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Filesystem OS type:       Linux
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Inode count:              1749664
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Block count:              6986588
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Reserved block count:     349329
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Overhead clusters:        153869
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Free blocks:              6832713
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Free inodes:              1749653
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 First block:              0
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Block size:               4096
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Fragment size:            4096
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Group descriptor size:    64
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Reserved GDT blocks:      1024
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Blocks per group:         32768
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Fragments per group:      32768
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Inodes per group:         8176
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Inode blocks per group:   511
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Flex block group size:    16
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Filesystem created:       Thu Feb  8 22:48:26 2024
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Last mount time:          Thu Feb  8 22:48:29 2024
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Last write time:          Thu Feb  8 22:48:29 2024
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Mount count:              1
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Maximum mount count:      -1
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Last checked:             Thu Feb  8 22:48:26 2024
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Check interval:           0 (<none>)
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Lifetime writes:          4174 kB
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Reserved blocks uid:      0 (user root)
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Reserved blocks gid:      0 (group root)
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 First inode:              11
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Inode size:	          256
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Required extra isize:     32
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Desired extra isize:      32
+2024-02-08 22:49:07,869 DEBUG probert.utils:49 Journal inode:            8
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Default directory hash:   half_md4
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Directory Hash Seed:      ced679c5-c06e-4bec-a8d2-b5e69a5fd01c
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Journal backup:           inode blocks
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Checksum type:            crc32c
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Checksum:                 0xba6b6614
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Journal features:         journal_64bit journal_checksum_v3
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Total journal size:       128M
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Total journal blocks:     32768
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Max transaction length:   32768
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Fast commit length:       0
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Journal sequence:         0x00000002
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Journal start:            1
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Journal checksum type:    crc32c
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 Journal checksum:         0x8442aa8d
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 
+2024-02-08 22:49:07,870 DEBUG probert.utils:47 stderr: ------------------------------------------
+2024-02-08 22:49:07,870 DEBUG probert.utils:49 dumpe2fs 1.46.5 (30-Dec-2021)
+2024-02-08 22:49:07,870 DEBUG probert.utils:65 --------------------------------------------------
+2024-02-08 22:49:07,881 DEBUG probert.utils:62 Command `/usr/sbin/resize2fs -P /dev/sda4` exited with result: 0
+2024-02-08 22:49:07,881 DEBUG probert.utils:47 stdout: ------------------------------------------
+2024-02-08 22:49:07,881 DEBUG probert.utils:49 Estimated minimum size of the filesystem: 48909
+2024-02-08 22:49:07,881 DEBUG probert.utils:47 stderr: ------------------------------------------
+2024-02-08 22:49:07,881 DEBUG probert.utils:49 resize2fs 1.46.5 (30-Dec-2021)
+2024-02-08 22:49:07,882 DEBUG probert.utils:65 --------------------------------------------------
+2024-02-08 22:49:07,883 DEBUG probert.filesystems:139 swap volume size not found. Neither ID_PART_ENTRY_SIZE nor attrs:size present
+2024-02-08 22:49:07,888 DEBUG subiquitycore.utils:68 run_command called: ['udevadm', 'settle', '-t', '0']
+2024-02-08 22:49:07,892 DEBUG probert.utils:62 Command `/usr/sbin/dumpe2fs -h /dev/dm-1` exited with result: 0
+2024-02-08 22:49:07,892 DEBUG probert.utils:47 stdout: ------------------------------------------
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Filesystem volume name:   <none>
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Last mounted on:          /
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Filesystem UUID:          3caa34a2-ca40-409f-a97f-1587a98f7d35
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Filesystem magic number:  0xEF53
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Filesystem revision #:    1 (dynamic)
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Filesystem features:      has_journal ext_attr resize_inode dir_index filetype extent 64bit flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Filesystem flags:         signed_directory_hash 
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Default mount options:    user_xattr acl
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Filesystem state:         clean
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Errors behavior:          Continue
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Filesystem OS type:       Linux
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Inode count:              6291456
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Block count:              25165824
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Reserved block count:     1258291
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Overhead clusters:        541379
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Free blocks:              23984839
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Free inodes:              6238533
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 First block:              0
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Block size:               4096
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Fragment size:            4096
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Group descriptor size:    64
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Reserved GDT blocks:      1024
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Blocks per group:         32768
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Fragments per group:      32768
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Inodes per group:         8192
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Inode blocks per group:   512
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 RAID stride:              4
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 RAID stripe width:        32
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Flex block group size:    16
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Filesystem created:       Thu Feb  8 21:34:31 2024
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Last mount time:          Thu Feb  8 22:39:15 2024
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Last write time:          Thu Feb  8 22:39:15 2024
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Mount count:              4
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Maximum mount count:      -1
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Last checked:             Thu Feb  8 21:34:31 2024
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Check interval:           0 (<none>)
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Lifetime writes:          5106 MB
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Reserved blocks uid:      0 (user root)
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Reserved blocks gid:      0 (group root)
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 First inode:              11
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Inode size:	          256
+2024-02-08 22:49:07,892 DEBUG probert.utils:49 Required extra isize:     32
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Desired extra isize:      32
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Journal inode:            8
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Default directory hash:   half_md4
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Directory Hash Seed:      c5c32d42-681b-47c7-8a8a-10ced9635e8e
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Journal backup:           inode blocks
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Checksum type:            crc32c
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Checksum:                 0x0a508755
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Journal features:         journal_incompat_revoke journal_64bit journal_checksum_v3
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Total journal size:       512M
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Total journal blocks:     131072
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Max transaction length:   131072
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Fast commit length:       0
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Journal sequence:         0x0000387e
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Journal start:            0
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Journal checksum type:    crc32c
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 Journal checksum:         0x1e8cb3aa
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 
+2024-02-08 22:49:07,893 DEBUG probert.utils:47 stderr: ------------------------------------------
+2024-02-08 22:49:07,893 DEBUG probert.utils:49 dumpe2fs 1.46.5 (30-Dec-2021)
+2024-02-08 22:49:07,893 DEBUG probert.utils:65 --------------------------------------------------
+2024-02-08 22:49:07,894 DEBUG probert.utils:62 Command `/usr/sbin/resize2fs -P /dev/dm-1` exited with result: 0
+2024-02-08 22:49:07,894 DEBUG probert.utils:47 stdout: ------------------------------------------
+2024-02-08 22:49:07,894 DEBUG probert.utils:49 Estimated minimum size of the filesystem: 1131798
+2024-02-08 22:49:07,894 DEBUG probert.utils:47 stderr: ------------------------------------------
+2024-02-08 22:49:07,894 DEBUG probert.utils:49 resize2fs 1.46.5 (30-Dec-2021)
+2024-02-08 22:49:07,894 DEBUG probert.utils:65 --------------------------------------------------
+2024-02-08 22:49:07,900 DEBUG probert.multipath:48 Extracted multipath maps fields: ['ok']
+2024-02-08 22:49:07,900 DEBUG probert.multipath:52 Failed to parse multipath maps entry: ok: MMap.__new__() missing 2 required positional arguments: 'sysfs' and 'paths'
+2024-02-08 22:49:07,901 DEBUG subiquitycore.utils:81 run_command ['udevadm', 'settle', '-t', '0'] exited with code 0
+2024-02-08 22:49:07,901 DEBUG subiquity.server.controllers.filesystem:1005 _udev_event change Device('/sys/devices/pci0000:00/0000:00:08.1/0000:0a:00.3/usb4/4-2/4-2:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda4')
+2024-02-08 22:49:07,901 DEBUG probert.multipath:48 Extracted multipath paths fields: ['nvme0n1', 'S64DNM0W410152M     ', '[orphan]', '[undef]', '[undef]', '[undef]', '[undef]', '[undef]']
+2024-02-08 22:49:07,901 DEBUG probert.dasd:134 Probing DASD devies
+2024-02-08 22:49:07,902 DEBUG probert.dasd:137 DASD devices only present on s390x, arch=x86_64
+2024-02-08 22:49:07,902 DEBUG subiquity.server.controllers.filesystem:1005 _udev_event change Device('/sys/devices/virtual/block/dm-1')
+2024-02-08 22:49:07,902 DEBUG subiquity.server.controllers.filesystem:986 Skipping run of Probert - probe run already active
+2024-02-08 22:49:07,926 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=nextcloud HTTP/1.1" 200 None
+2024-02-08 22:49:07,927 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/nextcloud: SUCCESS: 
+2024-02-08 22:49:07,927 DEBUG root:37 start: subiquity/SnapList/loader/fetch/wekan: 
+2024-02-08 22:49:08,041 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=wekan HTTP/1.1" 200 None
+2024-02-08 22:49:08,041 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/wekan: SUCCESS: 
+2024-02-08 22:49:08,042 DEBUG root:37 start: subiquity/SnapList/loader/fetch/kata-containers: 
+2024-02-08 22:49:08,138 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=kata-containers HTTP/1.1" 200 None
+2024-02-08 22:49:08,138 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/kata-containers: SUCCESS: 
+2024-02-08 22:49:08,138 DEBUG root:37 start: subiquity/SnapList/loader/fetch/docker: 
+2024-02-08 22:49:08,214 INFO probert.lvm:120 b'  3 logical volume(s) in volume group "pve" now active\n'
+2024-02-08 22:49:08,246 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=docker HTTP/1.1" 200 None
+2024-02-08 22:49:08,247 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/docker: SUCCESS: 
+2024-02-08 22:49:08,247 DEBUG root:37 start: subiquity/SnapList/loader/fetch/canonical-livepatch: 
+2024-02-08 22:49:08,291 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:08,292 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:08,292 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:08,292 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:08,293 ERROR probert.lvm:217 Found duplicate logical volume: pve/data
+2024-02-08 22:49:08,303 DEBUG curtin:1312 Extracting storage config from probe data
+2024-02-08 22:49:08,304 DEBUG curtin:73 /dev/nvme0n1 is multipath device member? False
+2024-02-08 22:49:08,304 DEBUG curtin:86 /dev/nvme0n1 is multipath device partition? False
+2024-02-08 22:49:08,304 DEBUG curtin:61 /dev/nvme0n1 is multipath device? False
+2024-02-08 22:49:08,304 DEBUG curtin:86 /dev/nvme0n1 is multipath device partition? False
+2024-02-08 22:49:08,304 DEBUG curtin:61 /dev/nvme0n1 is multipath device? False
+2024-02-08 22:49:08,318 DEBUG curtin:73 /dev/nvme0n1p1 is multipath device member? False
+2024-02-08 22:49:08,318 DEBUG curtin:86 /dev/nvme0n1p1 is multipath device partition? False
+2024-02-08 22:49:08,318 DEBUG curtin:61 /dev/nvme0n1p1 is multipath device? False
+2024-02-08 22:49:08,318 DEBUG curtin:86 /dev/nvme0n1p1 is multipath device partition? False
+2024-02-08 22:49:08,318 DEBUG curtin:86 /dev/nvme0n1p1 is multipath device partition? False
+2024-02-08 22:49:08,347 DEBUG curtin:73 /dev/nvme0n1p2 is multipath device member? False
+2024-02-08 22:49:08,347 DEBUG curtin:86 /dev/nvme0n1p2 is multipath device partition? False
+2024-02-08 22:49:08,347 DEBUG curtin:61 /dev/nvme0n1p2 is multipath device? False
+2024-02-08 22:49:08,347 DEBUG curtin:86 /dev/nvme0n1p2 is multipath device partition? False
+2024-02-08 22:49:08,347 DEBUG curtin:86 /dev/nvme0n1p2 is multipath device partition? False
+2024-02-08 22:49:08,355 DEBUG curtin:73 /dev/nvme0n1p3 is multipath device member? False
+2024-02-08 22:49:08,355 DEBUG curtin:86 /dev/nvme0n1p3 is multipath device partition? False
+2024-02-08 22:49:08,355 DEBUG curtin:61 /dev/nvme0n1p3 is multipath device? False
+2024-02-08 22:49:08,355 DEBUG curtin:86 /dev/nvme0n1p3 is multipath device partition? False
+2024-02-08 22:49:08,356 DEBUG curtin:86 /dev/nvme0n1p3 is multipath device partition? False
+2024-02-08 22:49:08,363 DEBUG curtin:73 /dev/sda is multipath device member? False
+2024-02-08 22:49:08,364 DEBUG curtin:86 /dev/sda is multipath device partition? False
+2024-02-08 22:49:08,364 DEBUG curtin:61 /dev/sda is multipath device? False
+2024-02-08 22:49:08,364 DEBUG curtin:86 /dev/sda is multipath device partition? False
+2024-02-08 22:49:08,364 DEBUG curtin:61 /dev/sda is multipath device? False
+2024-02-08 22:49:08,374 DEBUG curtin:73 /dev/sda1 is multipath device member? False
+2024-02-08 22:49:08,374 DEBUG curtin:86 /dev/sda1 is multipath device partition? False
+2024-02-08 22:49:08,374 DEBUG curtin:61 /dev/sda1 is multipath device? False
+2024-02-08 22:49:08,375 DEBUG curtin:86 /dev/sda1 is multipath device partition? False
+2024-02-08 22:49:08,375 DEBUG curtin:86 /dev/sda1 is multipath device partition? False
+2024-02-08 22:49:08,386 DEBUG curtin:73 /dev/sda2 is multipath device member? False
+2024-02-08 22:49:08,386 DEBUG curtin:86 /dev/sda2 is multipath device partition? False
+2024-02-08 22:49:08,386 DEBUG curtin:61 /dev/sda2 is multipath device? False
+2024-02-08 22:49:08,386 DEBUG curtin:86 /dev/sda2 is multipath device partition? False
+2024-02-08 22:49:08,386 DEBUG curtin:86 /dev/sda2 is multipath device partition? False
+2024-02-08 22:49:08,391 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=canonical-livepatch HTTP/1.1" 200 None
+2024-02-08 22:49:08,392 DEBUG curtin:73 /dev/sda3 is multipath device member? False
+2024-02-08 22:49:08,392 DEBUG curtin:86 /dev/sda3 is multipath device partition? False
+2024-02-08 22:49:08,392 DEBUG curtin:61 /dev/sda3 is multipath device? False
+2024-02-08 22:49:08,392 DEBUG curtin:86 /dev/sda3 is multipath device partition? False
+2024-02-08 22:49:08,392 DEBUG curtin:86 /dev/sda3 is multipath device partition? False
+2024-02-08 22:49:08,399 DEBUG curtin:73 /dev/sda4 is multipath device member? False
+2024-02-08 22:49:08,399 DEBUG curtin:86 /dev/sda4 is multipath device partition? False
+2024-02-08 22:49:08,399 DEBUG curtin:61 /dev/sda4 is multipath device? False
+2024-02-08 22:49:08,399 DEBUG curtin:86 /dev/sda4 is multipath device partition? False
+2024-02-08 22:49:08,399 DEBUG curtin:86 /dev/sda4 is multipath device partition? False
+2024-02-08 22:49:08,405 DEBUG curtin:61 /dev/dm-0 is multipath device? False
+2024-02-08 22:49:08,405 DEBUG curtin:86 /dev/dm-0 is multipath device partition? False
+2024-02-08 22:49:08,406 DEBUG curtin:61 /dev/dm-1 is multipath device? False
+2024-02-08 22:49:08,406 DEBUG curtin:86 /dev/dm-1 is multipath device partition? False
+2024-02-08 22:49:08,406 DEBUG curtin:61 /dev/dm-2 is multipath device? False
+2024-02-08 22:49:08,406 DEBUG curtin:86 /dev/dm-2 is multipath device partition? False
+2024-02-08 22:49:08,406 DEBUG curtin:61 /dev/dm-3 is multipath device? False
+2024-02-08 22:49:08,406 DEBUG curtin:86 /dev/dm-3 is multipath device partition? False
+2024-02-08 22:49:08,406 DEBUG curtin:61 /dev/dm-4 is multipath device? False
+2024-02-08 22:49:08,406 DEBUG curtin:86 /dev/dm-4 is multipath device partition? False
+2024-02-08 22:49:08,406 DEBUG curtin:61 /dev/dm-5 is multipath device? False
+2024-02-08 22:49:08,406 DEBUG curtin:86 /dev/dm-5 is multipath device partition? False
+2024-02-08 22:49:08,406 DEBUG curtin:73 /dev/nvme0n1p2 is multipath device member? False
+2024-02-08 22:49:08,412 DEBUG curtin:73 /dev/sda is multipath device member? False
+2024-02-08 22:49:08,418 DEBUG curtin:73 /dev/sda1 is multipath device member? False
+2024-02-08 22:49:08,425 DEBUG curtin:73 /dev/sda2 is multipath device member? False
+2024-02-08 22:49:08,431 DEBUG curtin:73 /dev/sda4 is multipath device member? False
+2024-02-08 22:49:08,437 DEBUG curtin:73 /dev/dm-0 is multipath device member? False
+2024-02-08 22:49:08,437 DEBUG curtin:73 /dev/dm-1 is multipath device member? False
+2024-02-08 22:49:08,487 DEBUG curtin:1319 Sorting extracted configurations
+2024-02-08 22:49:08,487 INFO curtin:1338 Validating extracted storage config components
+2024-02-08 22:49:08,497 ERROR curtin:1344 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data_tmeta",
+ "name": "data_tmeta",
+ "path": null,
+ "size": "3699376128B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:49:08,497 ERROR curtin:1344 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data_tdata",
+ "name": "data_tdata",
+ "path": null,
+ "size": "362777935872B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:49:08,497 ERROR curtin:1344 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data",
+ "name": "data",
+ "path": null,
+ "size": "362777935872B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:49:08,497 WARNING curtin:1347 Extract storage config does not validate.
+2024-02-08 22:49:08,501 DEBUG curtin:1355 Extracted (unmerged) storage config:
+storage:
+-   id: disk-nvme0n1
+    path: /dev/nvme0n1
+    ptable: gpt
+    serial: Samsung_SSD_980_500GB_S64DNM0W410152M
+    type: disk
+    wwn: eui.002538d4319023c4
+-   id: disk-sda
+    path: /dev/sda
+    ptable: gpt
+    serial: SanDisk_Ultra_4C530001130112115502-0:0
+    type: disk
+-   device: disk-nvme0n1
+    flag: bios_grub
+    id: partition-nvme0n1p1
+    number: 1
+    offset: 17408
+    partition_type: 21686148-6449-6e6f-744e-656564454649
+    path: /dev/nvme0n1p1
+    size: 1031168
+    type: partition
+-   device: disk-nvme0n1
+    flag: boot
+    id: partition-nvme0n1p2
+    number: 2
+    offset: 1048576
+    partition_type: c12a7328-f81f-11d2-ba4b-00a0c93ec93b
+    path: /dev/nvme0n1p2
+    size: 1073741824
+    type: partition
+-   device: disk-nvme0n1
+    flag: lvm
+    id: partition-nvme0n1p3
+    number: 3
+    offset: 1074790400
+    partition_type: e6d6d379-f507-44c2-a23c-238f2a3df928
+    path: /dev/nvme0n1p3
+    size: 499033054720
+    type: partition
+-   device: disk-sda
+    id: partition-sda1
+    number: 1
+    offset: 32768
+    partition_type: ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+    path: /dev/sda1
+    size: 2127863808
+    type: partition
+-   device: disk-sda
+    flag: boot
+    id: partition-sda2
+    number: 2
+    offset: 2127896576
+    partition_type: c12a7328-f81f-11d2-ba4b-00a0c93ec93b
+    path: /dev/sda2
+    size: 5154816
+    type: partition
+-   device: disk-sda
+    id: partition-sda3
+    number: 3
+    offset: 2133051392
+    partition_type: ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+    path: /dev/sda3
+    size: 307200
+    type: partition
+-   device: disk-sda
+    flag: linux
+    id: partition-sda4
+    number: 4
+    offset: 2134900736
+    partition_type: 0fc63daf-8483-4772-8e79-3d69d8477de4
+    path: /dev/sda4
+    size: 28617067008
+    type: partition
+-   fstype: vfat
+    id: format-partition-nvme0n1p2
+    type: format
+    volume: partition-nvme0n1p2
+-   fstype: iso9660
+    id: format-disk-sda
+    type: format
+    volume: disk-sda
+-   fstype: iso9660
+    id: format-partition-sda1
+    type: format
+    volume: partition-sda1
+-   fstype: vfat
+    id: format-partition-sda2
+    type: format
+    volume: partition-sda2
+-   fstype: ext4
+    id: format-partition-sda4
+    type: format
+    uuid: 7fee4cbc-f6fc-41a9-84fe-36f947533bb6
+    volume: partition-sda4
+-   fstype: ext4
+    id: format-lvm-partition-root
+    type: format
+    uuid: 3caa34a2-ca40-409f-a97f-1587a98f7d35
+    volume: lvm-partition-root
+-   devices:
+    - partition-nvme0n1p3
+    id: lvm-volgroup-pve
+    name: pve
+    type: lvm_volgroup
+-   id: lvm-partition-swap
+    name: swap
+    path: /dev/dm-0
+    size: 8589934592B
+    type: lvm_partition
+    volgroup: lvm-volgroup-pve
+-   id: lvm-partition-root
+    name: root
+    path: /dev/dm-1
+    size: 103079215104B
+    type: lvm_partition
+    volgroup: lvm-volgroup-pve
+-   device: format-partition-sda1
+    id: mount-partition-sda1
+    path: /cdrom
+    type: mount
+
+2024-02-08 22:49:08,501 DEBUG curtin:1359 Generating storage config dependencies
+2024-02-08 22:49:08,501 DEBUG curtin:236 Validate: partition-nvme0n1p1:SourceType:partition -> (DepId:disk-nvme0n1 DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,501 DEBUG curtin:236 Validate: partition-nvme0n1p2:SourceType:partition -> (DepId:disk-nvme0n1 DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,501 DEBUG curtin:236 Validate: partition-nvme0n1p3:SourceType:partition -> (DepId:disk-nvme0n1 DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-sda1:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-sda2:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-sda3:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-sda4:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: format-partition-nvme0n1p2:SourceType:format -> (DepId:partition-nvme0n1p2 DepType:partition) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'lvm_partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-nvme0n1p2:SourceType:partition -> (DepId:disk-nvme0n1 DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: format-disk-sda:SourceType:format -> (DepId:disk-sda DepType:disk) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'lvm_partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: format-partition-sda1:SourceType:format -> (DepId:partition-sda1 DepType:partition) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'lvm_partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-sda1:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: format-partition-sda2:SourceType:format -> (DepId:partition-sda2 DepType:partition) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'lvm_partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-sda2:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: format-partition-sda4:SourceType:format -> (DepId:partition-sda4 DepType:partition) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'lvm_partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-sda4:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: format-lvm-partition-root:SourceType:format -> (DepId:lvm-partition-root DepType:lvm_partition) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'lvm_partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: lvm-partition-root:SourceType:lvm_partition -> (DepId:lvm-volgroup-pve DepType:lvm_volgroup) in SourceDeps:{'lvm_volgroup'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: lvm-volgroup-pve:SourceType:lvm_volgroup -> (DepId:partition-nvme0n1p3 DepType:partition) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-nvme0n1p3:SourceType:partition -> (DepId:disk-nvme0n1 DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: lvm-volgroup-pve:SourceType:lvm_volgroup -> (DepId:partition-nvme0n1p3 DepType:partition) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-nvme0n1p3:SourceType:partition -> (DepId:disk-nvme0n1 DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: lvm-partition-swap:SourceType:lvm_partition -> (DepId:lvm-volgroup-pve DepType:lvm_volgroup) in SourceDeps:{'lvm_volgroup'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: lvm-volgroup-pve:SourceType:lvm_volgroup -> (DepId:partition-nvme0n1p3 DepType:partition) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-nvme0n1p3:SourceType:partition -> (DepId:disk-nvme0n1 DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: lvm-partition-root:SourceType:lvm_partition -> (DepId:lvm-volgroup-pve DepType:lvm_volgroup) in SourceDeps:{'lvm_volgroup'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: lvm-volgroup-pve:SourceType:lvm_volgroup -> (DepId:partition-nvme0n1p3 DepType:partition) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: partition-nvme0n1p3:SourceType:partition -> (DepId:disk-nvme0n1 DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,502 DEBUG curtin:236 Validate: mount-partition-sda1:SourceType:mount -> (DepId:format-partition-sda1 DepType:format) in SourceDeps:{'format'} ? result=True
+2024-02-08 22:49:08,503 DEBUG curtin:236 Validate: format-partition-sda1:SourceType:format -> (DepId:partition-sda1 DepType:partition) in SourceDeps:{'raid', 'dm_crypt', 'disk', 'partition', 'lvm_partition', 'bcache'} ? result=True
+2024-02-08 22:49:08,503 DEBUG curtin:236 Validate: partition-sda1:SourceType:partition -> (DepId:disk-sda DepType:disk) in SourceDeps:{'disk', 'partition', 'bcache', 'raid'} ? result=True
+2024-02-08 22:49:08,503 DEBUG curtin:1365 Merging storage config dependencies
+2024-02-08 22:49:08,507 DEBUG curtin:1370 Merged storage config:
+storage:
+    config:
+    -   id: disk-nvme0n1
+        path: /dev/nvme0n1
+        ptable: gpt
+        serial: Samsung_SSD_980_500GB_S64DNM0W410152M
+        type: disk
+        wwn: eui.002538d4319023c4
+    -   id: disk-sda
+        path: /dev/sda
+        ptable: gpt
+        serial: SanDisk_Ultra_4C530001130112115502-0:0
+        type: disk
+    -   fstype: iso9660
+        id: format-disk-sda
+        type: format
+        volume: disk-sda
+    -   device: disk-nvme0n1
+        flag: bios_grub
+        id: partition-nvme0n1p1
+        number: 1
+        offset: 17408
+        partition_type: 21686148-6449-6e6f-744e-656564454649
+        path: /dev/nvme0n1p1
+        size: 1031168
+        type: partition
+    -   device: disk-nvme0n1
+        flag: boot
+        id: partition-nvme0n1p2
+        number: 2
+        offset: 1048576
+        partition_type: c12a7328-f81f-11d2-ba4b-00a0c93ec93b
+        path: /dev/nvme0n1p2
+        size: 1073741824
+        type: partition
+    -   device: disk-nvme0n1
+        flag: lvm
+        id: partition-nvme0n1p3
+        number: 3
+        offset: 1074790400
+        partition_type: e6d6d379-f507-44c2-a23c-238f2a3df928
+        path: /dev/nvme0n1p3
+        size: 499033054720
+        type: partition
+    -   fstype: vfat
+        id: format-partition-nvme0n1p2
+        type: format
+        volume: partition-nvme0n1p2
+    -   devices:
+        - partition-nvme0n1p3
+        id: lvm-volgroup-pve
+        name: pve
+        type: lvm_volgroup
+    -   device: disk-sda
+        id: partition-sda1
+        number: 1
+        offset: 32768
+        partition_type: ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        path: /dev/sda1
+        size: 2127863808
+        type: partition
+    -   device: disk-sda
+        flag: boot
+        id: partition-sda2
+        number: 2
+        offset: 2127896576
+        partition_type: c12a7328-f81f-11d2-ba4b-00a0c93ec93b
+        path: /dev/sda2
+        size: 5154816
+        type: partition
+    -   device: disk-sda
+        id: partition-sda3
+        number: 3
+        offset: 2133051392
+        partition_type: ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
+        path: /dev/sda3
+        size: 307200
+        type: partition
+    -   device: disk-sda
+        flag: linux
+        id: partition-sda4
+        number: 4
+        offset: 2134900736
+        partition_type: 0fc63daf-8483-4772-8e79-3d69d8477de4
+        path: /dev/sda4
+        size: 28617067008
+        type: partition
+    -   fstype: iso9660
+        id: format-partition-sda1
+        type: format
+        volume: partition-sda1
+    -   fstype: vfat
+        id: format-partition-sda2
+        type: format
+        volume: partition-sda2
+    -   fstype: ext4
+        id: format-partition-sda4
+        type: format
+        uuid: 7fee4cbc-f6fc-41a9-84fe-36f947533bb6
+        volume: partition-sda4
+    -   id: lvm-partition-root
+        name: root
+        path: /dev/dm-1
+        size: 103079215104B
+        type: lvm_partition
+        volgroup: lvm-volgroup-pve
+    -   id: lvm-partition-swap
+        name: swap
+        path: /dev/dm-0
+        size: 8589934592B
+        type: lvm_partition
+        volgroup: lvm-volgroup-pve
+    -   device: format-partition-sda1
+        id: mount-partition-sda1
+        path: /cdrom
+        type: mount
+    -   fstype: ext4
+        id: format-lvm-partition-root
+        type: format
+        uuid: 3caa34a2-ca40-409f-a97f-1587a98f7d35
+        volume: lvm-partition-root
+    version: 2
+
+2024-02-08 22:49:08,507 DEBUG subiquity.models.filesystem:1406 exclusions {'format-partition-sda1', 'format-disk-sda', 'partition-sda4', 'partition-sda1', 'partition-sda3', 'format-partition-sda2', 'format-partition-sda4', 'disk-sda', 'partition-sda2'}
+2024-02-08 22:49:08,507 DEBUG root:37 finish: subiquity/Filesystem/_probe/probe_once: SUCCESS: restricted=False
+2024-02-08 22:49:08,507 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/canonical-livepatch: SUCCESS: 
+2024-02-08 22:49:08,507 DEBUG subiquity.server.controllers.filesystem:866 block probing took 1.0 seconds
+2024-02-08 22:49:08,507 DEBUG root:37 finish: subiquity/Filesystem/_probe: SUCCESS: 
+2024-02-08 22:49:08,508 DEBUG root:37 start: subiquity/SnapList/loader/fetch/rocketchat-server: 
+2024-02-08 22:49:08,658 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=rocketchat-server HTTP/1.1" 200 None
+2024-02-08 22:49:08,658 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/rocketchat-server: SUCCESS: 
+2024-02-08 22:49:08,659 DEBUG root:37 start: subiquity/SnapList/loader/fetch/mosquitto: 
+2024-02-08 22:49:08,749 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=mosquitto HTTP/1.1" 200 None
+2024-02-08 22:49:08,750 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/mosquitto: SUCCESS: 
+2024-02-08 22:49:08,750 DEBUG root:37 start: subiquity/SnapList/loader/fetch/etcd: 
+2024-02-08 22:49:08,880 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=etcd HTTP/1.1" 200 None
+2024-02-08 22:49:08,881 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/etcd: SUCCESS: 
+2024-02-08 22:49:08,896 DEBUG root:37 start: subiquity/SnapList/loader/fetch/powershell: 
+2024-02-08 22:49:08,984 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=powershell HTTP/1.1" 200 None
+2024-02-08 22:49:08,985 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/powershell: SUCCESS: 
+2024-02-08 22:49:08,985 DEBUG root:37 start: subiquity/SnapList/loader/fetch/sabnzbd: 
+2024-02-08 22:49:09,123 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=sabnzbd HTTP/1.1" 200 None
+2024-02-08 22:49:09,124 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/sabnzbd: SUCCESS: 
+2024-02-08 22:49:09,124 DEBUG root:37 start: subiquity/SnapList/loader/fetch/wormhole: 
+2024-02-08 22:49:09,228 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=wormhole HTTP/1.1" 200 None
+2024-02-08 22:49:09,229 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/wormhole: SUCCESS: 
+2024-02-08 22:49:09,229 DEBUG root:37 start: subiquity/SnapList/loader/fetch/aws-cli: 
+2024-02-08 22:49:09,367 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=aws-cli HTTP/1.1" 200 None
+2024-02-08 22:49:09,368 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/aws-cli: SUCCESS: 
+2024-02-08 22:49:09,368 DEBUG root:37 start: subiquity/SnapList/loader/fetch/google-cloud-sdk: 
+2024-02-08 22:49:09,487 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=google-cloud-sdk HTTP/1.1" 200 1740
+2024-02-08 22:49:09,488 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/google-cloud-sdk: SUCCESS: 
+2024-02-08 22:49:09,488 DEBUG root:37 start: subiquity/SnapList/loader/fetch/slcli: 
+2024-02-08 22:49:09,594 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=slcli HTTP/1.1" 200 None
+2024-02-08 22:49:09,594 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/slcli: SUCCESS: 
+2024-02-08 22:49:09,594 DEBUG root:37 start: subiquity/SnapList/loader/fetch/doctl: 
+2024-02-08 22:49:09,771 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=doctl HTTP/1.1" 200 None
+2024-02-08 22:49:09,772 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/doctl: SUCCESS: 
+2024-02-08 22:49:09,772 DEBUG root:37 start: subiquity/SnapList/loader/fetch/conjure-up: 
+2024-02-08 22:49:09,889 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=conjure-up HTTP/1.1" 200 None
+2024-02-08 22:49:09,890 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/conjure-up: SUCCESS: 
+2024-02-08 22:49:09,890 DEBUG root:37 start: subiquity/SnapList/loader/fetch/postgresql10: 
+2024-02-08 22:49:10,001 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=postgresql10 HTTP/1.1" 200 1463
+2024-02-08 22:49:10,002 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/postgresql10: SUCCESS: 
+2024-02-08 22:49:10,002 DEBUG root:37 start: subiquity/SnapList/loader/fetch/heroku: 
+2024-02-08 22:49:10,110 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=heroku HTTP/1.1" 200 None
+2024-02-08 22:49:10,111 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/heroku: SUCCESS: 
+2024-02-08 22:49:10,111 DEBUG root:37 start: subiquity/SnapList/loader/fetch/keepalived: 
+2024-02-08 22:49:10,235 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=keepalived HTTP/1.1" 200 None
+2024-02-08 22:49:10,235 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/keepalived: SUCCESS: 
+2024-02-08 22:49:10,236 DEBUG root:37 start: subiquity/SnapList/loader/fetch/prometheus: 
+2024-02-08 22:49:10,456 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=prometheus HTTP/1.1" 200 None
+2024-02-08 22:49:10,457 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/prometheus: SUCCESS: 
+2024-02-08 22:49:10,457 DEBUG root:37 start: subiquity/SnapList/loader/fetch/juju: 
+2024-02-08 22:49:10,663 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/find?name=juju HTTP/1.1" 200 None
+2024-02-08 22:49:10,664 DEBUG root:37 finish: subiquity/SnapList/loader/fetch/juju: SUCCESS: 
+2024-02-08 22:49:10,664 DEBUG root:37 finish: subiquity/SnapList/loader: SUCCESS: 
+2024-02-08 22:49:23,146 DEBUG root:37 start: subiquity/Locale/POST: 
+2024-02-08 22:49:23,146 DEBUG subiquity.server.controllers.locale:68 en_US.UTF-8
+2024-02-08 22:49:23,147 DEBUG subiquity.models.subiquity:253 model locale for postinstall stage is configured, to go {'snaplist', 'ubuntu_pro', 'network', 'ssh', 'drivers', 'identity'}
+2024-02-08 22:49:23,147 DEBUG root:37 finish: subiquity/Locale/POST: SUCCESS: 200 null
+2024-02-08 22:49:23,147 INFO aiohttp.access:206  [08/Feb/2024:22:49:23 +0000] "POST /locale HTTP/1.1" 200 190 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:23,147 DEBUG subiquitycore.utils:96 arun_command called: ['localectl', 'set-locale', 'en_US.UTF-8']
+2024-02-08 22:49:23,152 DEBUG root:37 start: subiquity/Refresh/GET: 
+2024-02-08 22:49:23,152 DEBUG root:37 finish: subiquity/Refresh/GET: SUCCESS: 200 {"availability": "AVAILABLE", "current_snap_version": "23.08.1", "new_snap_ve...
+2024-02-08 22:49:23,152 INFO aiohttp.access:206  [08/Feb/2024:22:49:23 +0000] "GET /refresh HTTP/1.1" 200 282 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:23,353 DEBUG root:37 start: subiquity/Keyboard/GET: 
+2024-02-08 22:49:23,362 DEBUG root:37 finish: subiquity/Keyboard/GET: SUCCESS: 200 {"setting": {"layout": "us", "variant": "", "toggle": null}, "layouts": [{"co...
+2024-02-08 22:49:23,362 INFO aiohttp.access:206  [08/Feb/2024:22:49:23 +0000] "GET /keyboard HTTP/1.1" 200 41239 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:24,223 DEBUG subiquitycore.utils:106 arun_command ['localectl', 'set-locale', 'en_US.UTF-8'] exited with code 0
+2024-02-08 22:49:25,369 DEBUG root:37 start: subiquity/Refresh/GET: 
+2024-02-08 22:49:25,370 DEBUG root:37 finish: subiquity/Refresh/GET: SUCCESS: 200 {"availability": "AVAILABLE", "current_snap_version": "23.08.1", "new_snap_ve...
+2024-02-08 22:49:25,370 INFO aiohttp.access:206  [08/Feb/2024:22:49:25 +0000] "GET /refresh HTTP/1.1" 200 282 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:25,622 DEBUG subiquity.server.controllers.integrity:63 casper-md5check results: {'checksum_missmatch': [], 'result': 'pass'}
+2024-02-08 22:49:26,970 DEBUG root:37 start: subiquity/Refresh/POST: 
+2024-02-08 22:49:26,970 DEBUG root:37 start: subiquity/Refresh/POST/start_update: 
+2024-02-08 22:49:27,318 DEBUG urllib3.connectionpool:452 http://localhost:None "POST /v2/snaps/subiquity HTTP/1.1" 202 81
+2024-02-08 22:49:27,319 DEBUG root:37 finish: subiquity/Refresh/POST/start_update: SUCCESS: change id: 4
+2024-02-08 22:49:27,319 DEBUG root:37 finish: subiquity/Refresh/POST: SUCCESS: 200 "4"
+2024-02-08 22:49:27,319 INFO aiohttp.access:206  [08/Feb/2024:22:49:26 +0000] "POST /refresh HTTP/1.1" 200 189 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,321 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:27,326 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:27,329 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:27,330 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3670 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,433 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:27,434 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:27,437 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:27,438 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3673 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,541 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:27,542 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:27,545 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:27,546 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3673 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,649 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:27,650 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:27,653 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:27,653 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3673 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,757 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:27,759 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:27,762 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:27,762 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3673 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,866 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:27,868 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:27,870 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:27,871 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3700 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,974 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:27,976 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:27,979 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:27,979 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3700 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,082 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:28,083 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:28,086 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:28,086 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3701 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,189 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:28,191 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:28,193 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:28,194 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3701 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,297 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:28,298 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:28,301 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:28,301 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3701 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,404 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:28,405 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:28,408 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:28,408 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3702 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,510 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:28,512 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:28,515 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:28,515 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3702 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,618 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:28,619 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:28,622 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:28,623 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3702 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,725 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:28,726 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:28,729 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:28,729 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3702 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,831 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:28,853 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:28,855 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:28,855 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3704 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,959 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:28,971 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:28,972 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:28,972 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3703 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:29,076 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:29,077 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:29,079 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:29,079 INFO aiohttp.access:206  [08/Feb/2024:22:49:29 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3706 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:29,181 DEBUG root:37 start: subiquity/Refresh/progress_GET: 
+2024-02-08 22:49:29,182 DEBUG urllib3.connectionpool:452 http://localhost:None "GET /v2/changes/4 HTTP/1.1" 200 None
+2024-02-08 22:49:29,184 DEBUG root:37 finish: subiquity/Refresh/progress_GET: SUCCESS: 200 {"id": "4", "kind": "refresh-snap", "summary": "Refresh \"subiquity\" snap", ...
+2024-02-08 22:49:29,184 INFO aiohttp.access:206  [08/Feb/2024:22:49:29 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3706 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:29,203 DEBUG subiquitycore.utils:68 run_command called: ['udevadm', 'settle', '-t', '0']

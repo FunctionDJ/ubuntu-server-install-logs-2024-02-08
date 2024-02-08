@@ -1,0 +1,43 @@
+Feb  8 22:48:39 ubuntu-server groupadd[1571]: group added to /etc/group: name=netdev, GID=1000
+Feb  8 22:48:39 ubuntu-server groupadd[1571]: group added to /etc/gshadow: name=netdev
+Feb  8 22:48:39 ubuntu-server groupadd[1571]: new group: name=netdev, GID=1000
+Feb  8 22:48:39 ubuntu-server useradd[1577]: new group: name=installer, GID=1001
+Feb  8 22:48:39 ubuntu-server useradd[1577]: new user: name=installer, UID=1000, GID=1001, home=/home/installer, shell=/usr/bin/subiquity-shell, from=none
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'adm'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'dialout'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'cdrom'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'floppy'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'sudo'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'audio'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'dip'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'video'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'plugdev'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'lxd'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to group 'netdev'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'adm'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'dialout'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'cdrom'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'floppy'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'sudo'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'audio'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'dip'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'video'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'plugdev'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'lxd'
+Feb  8 22:48:39 ubuntu-server useradd[1577]: add 'installer' to shadow group 'netdev'
+Feb  8 22:48:40 ubuntu-server systemd-logind[1603]: Watching system buttons on /dev/input/event1 (Power Button)
+Feb  8 22:48:40 ubuntu-server systemd-logind[1603]: Watching system buttons on /dev/input/event0 (Power Button)
+Feb  8 22:48:40 ubuntu-server systemd-logind[1603]: Watching system buttons on /dev/input/event4 (ASRock LED Controller)
+Feb  8 22:48:40 ubuntu-server systemd-logind[1603]: Watching system buttons on /dev/input/event2 (Logitech Logitech Illuminated Keyboard)
+Feb  8 22:48:40 ubuntu-server systemd-logind[1603]: Watching system buttons on /dev/input/event3 (Logitech Logitech Illuminated Keyboard Consumer Control)
+Feb  8 22:48:40 ubuntu-server systemd-logind[1603]: New seat seat0.
+Feb  8 22:48:42 ubuntu-server sshd[1681]: Server listening on 0.0.0.0 port 22.
+Feb  8 22:48:42 ubuntu-server sshd[1681]: Server listening on :: port 22.
+Feb  8 22:48:52 ubuntu-server useradd[2249]: new user: name=lxd, UID=998, GID=100, home=/var/snap/lxd/common/lxd, shell=/bin/false, from=none
+Feb  8 22:49:06 ubuntu-server sshd[1681]: Received signal 15; terminating.
+Feb  8 22:49:06 ubuntu-server sshd[2558]: Server listening on 0.0.0.0 port 22.
+Feb  8 22:49:06 ubuntu-server sshd[2558]: Server listening on :: port 22.
+Feb  8 22:49:07 ubuntu-server chpasswd[2567]: pam_unix(chpasswd:chauthtok): password changed for installer
+Feb  8 22:51:29 ubuntu-server sudo:     root : PWD=/tmp/tmpmnd08rcx ; USER=root ; COMMAND=/usr/bin/lshw
+Feb  8 22:51:29 ubuntu-server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+Feb  8 22:51:30 ubuntu-server sudo: pam_unix(sudo:session): session closed for user root

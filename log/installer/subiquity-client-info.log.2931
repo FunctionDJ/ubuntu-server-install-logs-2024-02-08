@@ -1,0 +1,32 @@
+2024-02-08 22:49:36,960 INFO subiquity:130 Starting Subiquity TUI revision 5270 of snap /snap/subiquity/5270
+2024-02-08 22:49:36,960 INFO subiquity:131 Arguments passed: ['/snap/subiquity/5270/usr/bin/subiquity']
+2024-02-08 22:49:37,972 INFO subiquity/Refresh:105 start: starting UI
+2024-02-08 22:49:37,973 INFO subiquity/Refresh:110 finish: (skipped) SUCCESS
+2024-02-08 22:49:37,973 INFO subiquity/Keyboard:105 start: starting UI
+2024-02-08 22:50:08,633 INFO subiquity/Keyboard:110 finish: completed SUCCESS
+2024-02-08 22:50:08,633 INFO subiquity/Source:105 start: starting UI
+2024-02-08 22:50:10,593 INFO subiquity/Source:110 finish: completed SUCCESS
+2024-02-08 22:50:10,593 INFO subiquity/Zdev:105 start: starting UI
+2024-02-08 22:50:10,594 INFO subiquity/Zdev:110 finish: (skipped) SUCCESS
+2024-02-08 22:50:10,594 INFO subiquity/Network:105 start: starting UI
+2024-02-08 22:50:11,704 INFO subiquity/Network:110 finish: completed SUCCESS
+2024-02-08 22:50:11,705 INFO subiquity/Proxy:105 start: starting UI
+2024-02-08 22:50:12,273 INFO subiquity/Proxy:110 finish: completed SUCCESS
+2024-02-08 22:50:12,273 INFO subiquity/Mirror:105 start: starting UI
+2024-02-08 22:50:16,662 INFO subiquity/Mirror:110 finish: completed SUCCESS
+2024-02-08 22:50:16,663 INFO subiquity/Proxy:105 start: starting UI
+2024-02-08 22:50:18,238 INFO subiquity/Proxy:110 finish: completed SUCCESS
+2024-02-08 22:50:20,228 INFO subiquity/Network:105 start: starting UI
+2024-02-08 22:50:23,200 INFO subiquity/Network:110 finish: completed SUCCESS
+2024-02-08 22:50:23,200 INFO subiquity/Proxy:105 start: starting UI
+2024-02-08 22:50:24,512 INFO subiquity/Proxy:110 finish: completed SUCCESS
+2024-02-08 22:50:24,512 INFO subiquity/Mirror:105 start: starting UI
+2024-02-08 22:50:30,107 INFO subiquity/Mirror:110 finish: completed SUCCESS
+2024-02-08 22:50:30,107 INFO subiquity/Refresh:105 start: starting UI
+2024-02-08 22:50:30,107 INFO subiquity/Refresh:110 finish: (skipped) SUCCESS
+2024-02-08 22:50:30,107 INFO subiquity/Filesystem:105 start: starting UI
+2024-02-08 22:51:19,044 INFO subiquity/Filesystem:110 finish: completed SUCCESS
+2024-02-08 22:51:19,044 INFO subiquity/Identity:105 start: starting UI
+2024-02-08 22:51:20,117 INFO subiquity/Identity:105 start: starting UI
+2024-02-08 22:51:30,976 INFO subiquity/ErrorReporter/1707432690.748204708.install_fail/load:105 start: 
+2024-02-08 22:51:31,254 INFO subiquity/ErrorReporter/1707432690.748204708.install_fail/load:110 finish:  SUCCESS

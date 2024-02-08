@@ -1,0 +1,81 @@
+2024-02-08 22:48:56,071 INFO subiquity:163 Starting Subiquity server revision 5004 of snap /snap/subiquity/5004
+2024-02-08 22:48:56,071 INFO subiquity:164 Arguments passed: ['/snap/subiquity/5004/lib/python3.10/site-packages/subiquity/cmd/server.py']
+2024-02-08 22:48:57,106 INFO aiohttp.access:206  [08/Feb/2024:22:48:57 +0000] "GET /meta/status?cur=null HTTP/1.1" 200 420 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:07,461 INFO root:37 start: subiquity/apply_autoinstall_config: 
+2024-02-08 22:49:07,466 INFO root:37 finish: subiquity/apply_autoinstall_config: SUCCESS: 
+2024-02-08 22:49:07,466 INFO root:37 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "cloud_init_ok": tr...
+2024-02-08 22:49:07,466 INFO aiohttp.access:206  [08/Feb/2024:22:48:57 +0000] "GET /meta/status?cur=%22CLOUD_INIT_WAIT%22 HTTP/1.1" 200 412 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:07,478 ERROR root:37 finish: subiquity/Refresh/check_for_update: FAIL: cancelled
+2024-02-08 22:49:07,478 ERROR root:37 finish: subiquity/Refresh/check_for_update: FAIL: cancelled
+2024-02-08 22:49:07,478 INFO root:37 start: subiquity/Meta/client_variant_GET: 
+2024-02-08 22:49:07,478 INFO root:37 finish: subiquity/Meta/client_variant_GET: SUCCESS: 200 "server"
+2024-02-08 22:49:07,479 INFO aiohttp.access:206  [08/Feb/2024:22:49:07 +0000] "GET /meta/client_variant HTTP/1.1" 200 194 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:07,484 INFO root:37 start: subiquity/Meta/status_GET: 
+2024-02-08 22:49:07,485 INFO root:37 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "cloud_init_ok": tr...
+2024-02-08 22:49:07,485 INFO aiohttp.access:206  [08/Feb/2024:22:49:07 +0000] "GET /meta/status?cur=null HTTP/1.1" 200 412 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:07,485 INFO root:37 start: subiquity/Meta/client_variant_POST: 
+2024-02-08 22:49:07,485 INFO root:37 finish: subiquity/Meta/client_variant_POST: SUCCESS: 200 null
+2024-02-08 22:49:07,485 INFO aiohttp.access:206  [08/Feb/2024:22:49:07 +0000] "POST /meta/client_variant?variant=%22server%22 HTTP/1.1" 200 190 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:07,485 INFO root:37 start: subiquity/Meta/status_GET: 
+2024-02-08 22:49:07,486 INFO aiohttp.access:206  [08/Feb/2024:22:49:07 +0000] "GET /locale HTTP/1.1" 200 195 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:08,214 INFO probert.lvm:120 b'  3 logical volume(s) in volume group "pve" now active\n'
+2024-02-08 22:49:08,291 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:08,292 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:08,292 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:08,292 ERROR probert.lvm:225 Found duplicate volume group: pve
+2024-02-08 22:49:08,293 ERROR probert.lvm:217 Found duplicate logical volume: pve/data
+2024-02-08 22:49:08,487 INFO curtin:1338 Validating extracted storage config components
+2024-02-08 22:49:08,497 ERROR curtin:1344 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data_tmeta",
+ "name": "data_tmeta",
+ "path": null,
+ "size": "3699376128B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:49:08,497 ERROR curtin:1344 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data_tdata",
+ "name": "data_tdata",
+ "path": null,
+ "size": "362777935872B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:49:08,497 ERROR curtin:1344 Validation error: None is not of type 'string' in 
+{
+ "id": "lvm-partition-data",
+ "name": "data",
+ "path": null,
+ "size": "362777935872B",
+ "type": "lvm_partition",
+ "volgroup": "lvm-volgroup-pve"
+}
+NoneType: None
+2024-02-08 22:49:08,497 WARNING curtin:1347 Extract storage config does not validate.
+2024-02-08 22:49:23,147 INFO aiohttp.access:206  [08/Feb/2024:22:49:23 +0000] "POST /locale HTTP/1.1" 200 190 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:23,152 INFO aiohttp.access:206  [08/Feb/2024:22:49:23 +0000] "GET /refresh HTTP/1.1" 200 282 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:23,362 INFO aiohttp.access:206  [08/Feb/2024:22:49:23 +0000] "GET /keyboard HTTP/1.1" 200 41239 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:25,370 INFO aiohttp.access:206  [08/Feb/2024:22:49:25 +0000] "GET /refresh HTTP/1.1" 200 282 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,319 INFO aiohttp.access:206  [08/Feb/2024:22:49:26 +0000] "POST /refresh HTTP/1.1" 200 189 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,330 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3670 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,438 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3673 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,546 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3673 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,653 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3673 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,762 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3673 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,871 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3700 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:27,979 INFO aiohttp.access:206  [08/Feb/2024:22:49:27 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3700 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,086 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3701 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,194 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3701 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,301 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3701 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,408 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3702 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,515 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3702 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,623 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3702 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,729 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3702 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,855 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3704 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:28,972 INFO aiohttp.access:206  [08/Feb/2024:22:49:28 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3703 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:29,079 INFO aiohttp.access:206  [08/Feb/2024:22:49:29 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3706 "-" "Python/3.10 aiohttp/3.8.1"
+2024-02-08 22:49:29,184 INFO aiohttp.access:206  [08/Feb/2024:22:49:29 +0000] "GET /refresh/progress?change_id=%224%22 HTTP/1.1" 200 3706 "-" "Python/3.10 aiohttp/3.8.1"
